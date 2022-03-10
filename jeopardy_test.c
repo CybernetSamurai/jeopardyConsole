@@ -49,6 +49,10 @@ void clearBoard()
 }
 
 void setGreen()
+{
    printf("\033[0;32m");
+}
 void setRed()
+{
    printf("\033[1;31m");
+}
