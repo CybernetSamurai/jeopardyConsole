@@ -6,26 +6,29 @@
 
 #include <stdio.h>
 
-#define ROWS 7
-#define COLS 30
+#define ROWS 9
+#define COLS 50
 
 void printBoard();
 void clearBoard();
 void setGreen();
 void setRed();
+void pointSelect();
 
 int main(void)
 {
-   int rowSelect, colSelect;
+   int rowSelect = 0, colSelect = 0;
    char board[ROWS][COLS] = 
    {
-     "----------JEOPARDY----------",
-     "200    200   200   200   200",
-     "400    400   400   400   400",
-     "600    600   600   600   600",
-     "800    800   800   800   800",
-     "1000  1000  1000  1000  1000",
-     "----------------------------"
+     "----------------JEOPARDY----------------",
+     "CAT1     CAT2     CAT3     CAT4     CAT5",
+     "----------------------------------------",
+     "200      200      200      200      200",
+     "400      400      400      400      400",
+     "600      600      600      600      600",
+     "800      800      800      800      800",
+     "1000    1000     1000     1000     1000",
+     "----------------------------------------"
    };
    
    setGreen();
@@ -34,6 +37,7 @@ int main(void)
    scanf("%d", &rowSelect);
    printf("Enter col: ");
    scanf("%d", &colSelect);
+   pointSelect(rowSelect, colSelect);
 }
 
 void printBoard(char board[ROWS][COLS])
@@ -55,4 +59,9 @@ void setGreen()
 void setRed()
 {
    printf("\033[1;31m");
+}
+
+void pointSelect(int row, int col)
+{
+   
 }
