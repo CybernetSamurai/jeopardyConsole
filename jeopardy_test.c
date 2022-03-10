@@ -63,5 +63,5 @@ void setRed()
 
 void pointSelect(int row, int col, char board[ROWS][COLS])
 {
-   printf("%s\n", board[row][col]);
+   printf("%s\n", board[row]);
 }
