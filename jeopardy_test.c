@@ -37,7 +37,7 @@ int main(void)
    scanf("%d", &rowSelect);
    printf("Enter col: ");
    scanf("%d", &colSelect);
-   pointSelect(rowSelect, colSelect);
+   pointSelect(rowSelect, colSelect, board);
 }
 
 void printBoard(char board[ROWS][COLS])
@@ -61,7 +61,7 @@ void setRed()
    printf("\033[1;31m");
 }
 
-void pointSelect(int row, int col)
+void pointSelect(int row, int col, char board[ROWS][COLS])
 {
-   
+   printf("%s\n", board[row][col]);
 }
