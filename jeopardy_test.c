@@ -6,8 +6,8 @@
 
 #include <stdio.h>
 
-#define ROWS 5
-#define COLS 6
+#define ROWS 7
+#define COLS 30
 
 void printBoard();
 
@@ -23,4 +23,13 @@ int main(void)
      "1000  1000  1000  1000  1000",
      "----------------------------"
    };
+   
+   printBoard(board);
+}
+
+void printBoard(char board[ROWS][COLS])
+{
+   int i;
+   for (i = 0; i < ROWS; i++)
+      printf("%s\n", board[i]);
 }
