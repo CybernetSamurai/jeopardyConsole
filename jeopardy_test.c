@@ -10,9 +10,11 @@
 #define COLS 30
 
 void printBoard();
+void clearBoard();
 
 int main(void)
 {
+   int rowSelect, colSelect;
    char board[ROWS][COLS] = 
    {
      "----------JEOPARDY----------",
@@ -25,6 +27,10 @@ int main(void)
    };
    
    printBoard(board);
+   printf("Enter row: ");
+   scanf("%d", &rowSelect);
+   printf("Enter col: ");
+   scanf("%d", &colSelect);
 }
 
 void printBoard(char board[ROWS][COLS])
@@ -32,4 +38,9 @@ void printBoard(char board[ROWS][COLS])
    int i;
    for (i = 0; i < ROWS; i++)
       printf("%s\n", board[i]);
+}
+
+void clearBoard()
+{
+   
 }
