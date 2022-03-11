@@ -5,6 +5,7 @@
 **************************************/
 
 #include <stdio.h>
+#include <string.h>
 
 #define ROWS 9
 #define COLS 50
