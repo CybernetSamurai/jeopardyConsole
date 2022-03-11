@@ -14,6 +14,7 @@ void clearBoard();
 void setGreen();
 void setRed();
 void setBlue();
+void setYellow();
 void pointSelect();
 
 int main(void)
@@ -43,8 +44,8 @@ int main(void)
 
 void printBoard(char board[ROWS][COLS])
 {
-   int i;
-   for (i = 0; i < ROWS; i++)
+   int i = 0;
+   for (i; i < ROWS; ++i)
       printf("%s\n", board[i]);
 }
 
@@ -67,7 +68,19 @@ void setBlue()
    printf("\033[0;34m");
 }
 
+void setYellow()
+{
+   printf("\033[0;33m");
+}
+
 void pointSelect(int row, int col, char board[ROWS][COLS])
 {
-   printf("%s\n", board[row]);
+   int i = 0, j = 0;
+   for (i; i < ROWS; ++i)
+      if (i == ROW)
+         setYellow();
+         printf("%s\n", board[i]);
+      else
+         setBlue();
+         printf("%s\n", board[i]);
 }
