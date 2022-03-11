@@ -77,7 +77,7 @@ void pointSelect(int row, int col, char board[ROWS][COLS])
 {
    int i = 0, j = 0;
    for (i; i < ROWS; ++i)
-      if (i == ROW)
+      if (i == row)
       {
          setYellow();
          printf("%s\n", board[i]);
