@@ -13,6 +13,7 @@ void printBoard();
 void clearBoard();
 void setGreen();
 void setRed();
+void setBlue();
 void pointSelect();
 
 int main(void)
