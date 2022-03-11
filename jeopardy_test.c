@@ -64,7 +64,7 @@ void setRed()
 
 void setBlue()
 {
-   printf("\033[0;35m");
+   printf("\033[0;34m");
 }
 
 void pointSelect(int row, int col, char board[ROWS][COLS])
