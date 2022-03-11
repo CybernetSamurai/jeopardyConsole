@@ -31,7 +31,7 @@ int main(void)
      "----------------------------------------"
    };
    
-   setGreen();
+   setBlue();
    printBoard(board);
    printf("Enter row: ");
    scanf("%d", &rowSelect);
@@ -59,6 +59,11 @@ void setGreen()
 void setRed()
 {
    printf("\033[1;31m");
+}
+
+void setBlue()
+{
+   printf("\033[0;35m");
 }
 
 void pointSelect(int row, int col, char board[ROWS][COLS])
