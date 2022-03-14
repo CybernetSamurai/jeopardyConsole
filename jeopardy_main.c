@@ -68,7 +68,7 @@ int main(void)
         }
         arraySelect[rowSelect][colSelect] = 1;
         clearScreen();
-        printQuestion();
+        printQuestion(rowSelect, colSelect);
         
     }
 }
@@ -120,7 +120,7 @@ void clearScreen() {
     printf("\e[2J\e[H");
 }
 
-void printQuestion() {
+void printQuestion(int row, int col) {
     char testQuestion[100] = "What is the meaning of life?";
     int test;
     
