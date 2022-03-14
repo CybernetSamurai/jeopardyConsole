@@ -124,8 +124,9 @@ void printQuestion() {
     char testQuestion = "What is the meaning of life?";
     int test;
     
-    printf("%s\n", testQuestion);
+    printf("%s\n", &testQuestion);
     printf("Yes or no ");
+    scanf("%d", &test);
 }
 
 
