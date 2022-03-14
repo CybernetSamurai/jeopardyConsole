@@ -15,6 +15,7 @@ void setBlue();
 void setYellow();
 void printBoard();
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
+void printQuestion();
 
 int main(void)
 {
@@ -66,6 +67,9 @@ int main(void)
                 printf("Error\n");
         }
         arraySelect[rowSelect][colSelect] = 1;
+        clearScreen();
+        printQuestion();
+        
     }
 }
 
@@ -114,6 +118,14 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
 
 void clearScreen() {
     printf("\e[2J\e[H");
+}
+
+void printQuestion() {
+    char testQuestion = "What is the meaning of life?";
+    int test;
+    
+    printf("%s\n", testQuestion);
+    printf("Yes or no ");
 }
 
 
