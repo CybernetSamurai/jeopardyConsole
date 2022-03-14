@@ -121,7 +121,7 @@ void clearScreen() {
 }
 
 void printQuestion() {
-    char testQuestion = "What is the meaning of life?";
+    char testQuestion[100] = "What is the meaning of life?";
     int test;
     
     printf("%s\n", &testQuestion);
