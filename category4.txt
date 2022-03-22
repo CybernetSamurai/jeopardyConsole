@@ -1,16 +1,5 @@
-Science Fiction
-
-200) What power do Jedi and sith use in star wars?
-Answer the force
-
-400) You are on this council but we do not grant you the rank of what?
-Answer: Master
-
-600) Who is the senate?
-Answer: emperor Palpatine
-
-800) What color pill must you take to see just how far the rabbit hole goes?
-Answer: Red 
-
-1000) Of the seven jedi fighting styles what form does Yoda utilize?
-Answer: form  4
+What power do Jedi and sith use in star wars?;The force
+You are on this council but we do not grant you the rank of what?;Master
+Who is the senate?;emperor Palpatine
+What color pill must you take to see just how far the rabbit hole goes?;Red 
+Of the seven jedi fighting styles what form does Yoda utilize?;form  4
