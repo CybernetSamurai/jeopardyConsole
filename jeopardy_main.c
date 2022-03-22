@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include "jeopardy_questions.c"
 
 #define ROWS 5
 #define COLS 6
