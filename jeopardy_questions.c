@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "jeopardy_questions.h"
 
 void printQuestion(int row, int col)
 {
