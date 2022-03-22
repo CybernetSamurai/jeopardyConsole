@@ -1,17 +1,5 @@
-Fantasy
-200)  You're what harry?
-answer : Wizard
-
-400) who created the one ring in lord of the rings?
-Answer: Sauron
-
-600) What was Voldemort's real name?
-Answer: Tom Marvolo Riddle
-
-800)  What are the three forbidden curses in Harry Potter?
-●	Killing Curse (Avada Kedavra)
-●	Cruciatus Curse (Crucio)
-●	Imperius Curse (Imperio)
-
-1000) Who was Sauron's master (the first dark lord)?
-Answer: Morgoth
+You're what harry?;Wizard
+Who created the one ring in lord of the rings?;Sauron
+What was Voldemort's real name?;Tom Marvolo Riddle
+What are the three forbidden curses in Harry Potter?;Killing Curse (Avada Kedavra) Cruciatus Curse (Crucio) Imperius Curse (Imperio)
+Who was Sauron's master (the first dark lord)?;Morgoth
