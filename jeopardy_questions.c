@@ -10,9 +10,9 @@ void printQuestion(int row, int col)
                             "category5",
                             "category6"
                          };
-  char cat;
-  
-  FILE* f = fopen(cat, "r");
-  if (f == NULL)
-    printf("Error opening file.\n");
+  //char cat;
+  printf("%s\n", fileList[0]);
+  //FILE* f = fopen(cat, "r");
+  //if (f == NULL)
+  //  printf("Error opening file.\n");
 }
