@@ -11,7 +11,7 @@ void printQuestion(int row, int col)
                             "category6"
                          };
   //char cat;
-  printf("%s\n", fileList[row - 1]);
+  printf("%s\n", fileList[col - 1]);
   //FILE* f = fopen(cat, "r");
   //if (f == NULL)
   //  printf("Error opening file.\n");
