@@ -1,15 +1,5 @@
-Animation
-200) What movie is the Character Shrek from?
-Answer: Shrek
-
-400)  What potion did shrek take to turn human in Shrek 2?
-Answer: Happily Ever After
-
-600) Where does the muffin man live in shrek?
-Answer: Drury lane
-
-800) What legendary hold did Po use in Kung Fu Panda 1?
-Answer: The Wuxi Finger Hold
-
-1000) What does Po say when he uses the legendary hold in Kung Fu Panda 1?
-Answer: Skadoosh
+What movie is the Character Shrek from?;Shrek
+What potion did shrek take to turn human in Shrek 2?;Happily Ever After
+Where does the muffin man live in shrek?;Drury lane
+What legendary hold did Po use in Kung Fu Panda 1?;The Wuxi Finger Hold
+What does Po say when he uses the legendary hold in Kung Fu Panda 1?;Skadoosh
