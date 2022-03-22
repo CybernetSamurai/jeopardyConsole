@@ -16,7 +16,6 @@ void setBlue();
 void setYellow();
 void printBoard();
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
-void printQuestion(int row, int col);
 
 int main(void)
 {
