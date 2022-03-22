@@ -1,17 +1,5 @@
-Action/adventure
-200)  What gas is used to turbo the cars in fast and the furious?
-Answer: Nitrous Oxide
-
-400) What dinosaur saves the main characters when they are cornered by velociraptors at the end of jurassic park?
-
-Answer T rex
-
-600) How many men did John Wick kill at a bar with a pencil?
-Answer: 3
-
-800) What is the name of the building where die hards events took place?
-
-Answer: Nakatomi Plaza 
-
-1000) What is the name of the species of alien showcased in the movie “Predator”?
-Answer: Yautja
+What gas is used to turbo the cars in fast and the furious?;Nitrous Oxide
+What dinosaur saves the main characters when they are cornered by velociraptors at the end of jurassic park?;T rex
+How many men did John Wick kill at a bar with a pencil?;3
+What is the name of the building where die hards events took place?;Nakatomi Plaza 
+What is the name of the species of alien showcased in the movie “Predator”?;Yautja
