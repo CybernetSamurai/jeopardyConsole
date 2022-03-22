@@ -16,7 +16,7 @@ void setBlue();
 void setYellow();
 void printBoard();
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
-void printQuestion();
+//void printQuestion();
 
 int main(void)
 {
@@ -121,32 +121,32 @@ void clearScreen() {
     printf("\e[2J\e[H");
 }
 
-void printQuestion(int row, int col) {
-    char testQuestion[100] = "What is the meaning of life?";
-    int test;
-    
-    printf(" _____       _                                       \n"
-           "/  __ \\     | |                                     \n"
-           "| /  \\/ __ _| |_ ___  __ _  ___  _ __ _   _         \n"
-           "| |    / _` | __/ _ \\/ _` |/ _ \\| '__| | | |       \n"
-           "| \\__/\\ (_| | ||  __/ (_| | (_) | |  | |_| |        \n"
-           " \\____/\\__,_|\\__\\___|\\__, |\\___/|_|   \\__, |   \n"
-           "                      __/ |            __/ |         \n"
-           "                     |___/            |___/          \n"
-           "     _   _____  _____  _____                         \n"
-           "    | | / __  \\|  _  ||  _  |                       \n"
-           "   / __)`' / /'| |/' || |/' |                        \n"
-           "   \\__ \\  / /  |  /| ||  /| |                      \n"
-           "   (   /./ /___\\ |_/ /\\ |_/ /                      \n"
-           "    |_| \\_____/ \\___/  \\___/                      \n");
-    printf("--------------------------------------------         \n");
-                                            
-                                                       
-                                            
-                                            
-    printf("%s\n", &testQuestion);
-    printf("Yes or no ");
-    scanf("%d", &test);
-}
+//void printQuestion(int row, int col) {
+//    char testQuestion[100] = "What is the meaning of life?";
+//    int test;
+//    
+//    printf(" _____       _                                       \n"
+//           "/  __ \\     | |                                     \n"
+//           "| /  \\/ __ _| |_ ___  __ _  ___  _ __ _   _         \n"
+//           "| |    / _` | __/ _ \\/ _` |/ _ \\| '__| | | |       \n"
+//           "| \\__/\\ (_| | ||  __/ (_| | (_) | |  | |_| |        \n"
+//           " \\____/\\__,_|\\__\\___|\\__, |\\___/|_|   \\__, |   \n"
+//           "                      __/ |            __/ |         \n"
+//           "                     |___/            |___/          \n"
+//           "     _   _____  _____  _____                         \n"
+//           "    | | / __  \\|  _  ||  _  |                       \n"
+//           "   / __)`' / /'| |/' || |/' |                        \n"
+//           "   \\__ \\  / /  |  /| ||  /| |                      \n"
+//           "   (   /./ /___\\ |_/ /\\ |_/ /                      \n"
+//           "    |_| \\_____/ \\___/  \\___/                      \n");
+//    printf("--------------------------------------------         \n");
+//                                            
+//                                                       
+//                                            
+//                                            
+//    printf("%s\n", &testQuestion);
+//    printf("Yes or no ");
+//    scanf("%d", &test);
+//}
 
 
