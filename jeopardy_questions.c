@@ -24,7 +24,6 @@ void printQuestion(int row, int col) {
    else {
       while (fgets(line, sizeof line, f) != NULL) {
          if (loop_cnt == row) {
-            fscanf(f, "%[^\n]", line);
             printf("%s\n", line);
             //use line or in a function return it
             //in case of a return first close the file with "fclose(file);"
