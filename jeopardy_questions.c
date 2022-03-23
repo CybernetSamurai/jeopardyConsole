@@ -20,7 +20,7 @@ void printQuestion(int row, int col)
   if (f == NULL) printf("Error opening file.\n");
   char c[1000];
   // reads text until newline is encountered
-  fscanf(f, "%s", line);
+  fscanf(f, "%[^\n]", line);
   printf("%s\n", line);
   fclose(f);
   printf("yes or no");
