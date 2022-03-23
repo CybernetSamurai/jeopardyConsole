@@ -4,7 +4,7 @@ void printQuestion(int row, int col)
 {
   int temp;
   char line[1000];
-  char fileList[6][10] = {
+  char fileList[6][14] = {
                             "category1.txt",
                             "category2.txt",
                             "category3.txt",
