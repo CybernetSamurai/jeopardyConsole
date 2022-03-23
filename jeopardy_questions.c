@@ -12,10 +12,11 @@ void printQuestion(int row, int col) {
                               "category6.txt"
                           };
   
-  //if (f == NULL) printf("Error opening file.\n");
-  //fscanf(f, "%[^;]", line);
-  //printf("%s\n", line);
-  
+   //fscanf(f, "%[^;]", line);
+   //printf("%s\n", line);
+   
+   // Resource:
+   // https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
    FILE *f = fopen(fileList[col], "r");
    if ( f == NULL ) {
       printf("Error opening file.\n");
@@ -23,9 +24,9 @@ void printQuestion(int row, int col) {
    else {
       while (fgets(line_max, 1000, f) != NULL) {
          if (loop_cnt == row) {
-             printf("%s\n", line_max);
-               //use line or in a function return it
-               //in case of a return first close the file with "fclose(file);"
+            printf("%[^\n]", line_max);
+            //use line or in a function return it
+            //in case of a return first close the file with "fclose(file);"
          }
          else {
             ++loop_cnt;
