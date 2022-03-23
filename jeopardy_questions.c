@@ -3,6 +3,7 @@
 
 void printQuestion(int row, int col)
 {
+  int temp;
   char fileList[6][10] = {
                             "category1",
                             "category2",
@@ -14,6 +15,7 @@ void printQuestion(int row, int col)
   //char cat;
   //printf("%s\n", fileList[col - 1]);
   printf("hello world");
+  scanf("%d", &temp);
   //FILE* f = fopen(cat, "r");
   //if (f == NULL)
   //  printf("Error opening file.\n");
