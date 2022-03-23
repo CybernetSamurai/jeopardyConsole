@@ -12,7 +12,7 @@ void printQuestion(int row, int col)
                             "category6"
                          };
   //char cat;
-  printf("%s\n", fileList[col - 1]);
+  printf("%s\n", fileList[0]);
   printf("hello world");
   scanf("%d", &temp);
   //FILE* f = fopen(cat, "r");
