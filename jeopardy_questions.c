@@ -16,7 +16,7 @@ void printQuestion(int row, int col)
   //printf("%s\n", fileList[col]);
   //printf("hello world");
   //scanf("%d", &temp);
-  FILE *f = fopen(col, "r");
+  FILE *f = fopen(fileList[col], "r");
   if (f == NULL) printf("Error opening file.\n");
   char c[1000];
   // reads text until newline is encountered
