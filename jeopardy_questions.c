@@ -1,5 +1,5 @@
 #include <stdio.h>
-#incldue <string.h>
+#include <string.h>
 
 void printQuestion(int row, int col) {
    int temp, loop_cnt = 0;
