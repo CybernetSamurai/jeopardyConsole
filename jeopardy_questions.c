@@ -3,7 +3,7 @@
 
 void printQuestion(int row, int col) {
    int temp, loop_cnt = 0;
-   char line[300];
+   char line[250];
    char file_list[6][14] = {
                               "category1.txt",
                               "category2.txt",
