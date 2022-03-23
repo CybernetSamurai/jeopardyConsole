@@ -1,4 +1,5 @@
 #include <stdio.h>
+#incldue <string.h>
 
 void printQuestion(int row, int col) {
    int temp, loop_cnt = 0;
@@ -24,8 +25,10 @@ void printQuestion(int row, int col) {
    }
    else {
       while (fgets(line, 300, f) != NULL) {
-         printf("%s\n", line);
-         printf("hello\n");
+         //printf("%s\n", line);
+         strcpy(line_list[loop_cnt], line);
+         ++loop_cnt;
+         //printf("hello\n");
          //if (loop_cnt == row) {
          //   printf("%s\n", line);
          //   //use line or in a function return it
@@ -36,6 +39,7 @@ void printQuestion(int row, int col) {
          //}
       }
       fclose(f);
+      printf("%s\n", line_list[1]);
    }
    printf("yes or no");
    scanf("%d", &temp);
