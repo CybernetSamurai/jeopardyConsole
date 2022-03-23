@@ -69,7 +69,6 @@ int main(void)
         arraySelect[rowSelect][colSelect] = 1;
         clearScreen();
         printQuestion(rowSelect, colSelect);
-        printf("%s\n", &question);
         
     }
 }
