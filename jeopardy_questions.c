@@ -25,6 +25,7 @@ void printQuestion(int row, int col) {
    else {
       while (fgets(line, 300, f) != NULL) {
          printf("%s\n", line);
+         printf("hello\n");
          //if (loop_cnt == row) {
          //   printf("%s\n", line);
          //   //use line or in a function return it
