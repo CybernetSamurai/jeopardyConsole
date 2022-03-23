@@ -13,22 +13,20 @@ void printQuestion(int row, int col)
                             "category6.txt"
                          };
   
-  if (f == NULL) printf("Error opening file.\n");
+  //if (f == NULL) printf("Error opening file.\n");
   // reads text until newline is encountered
-  fscanf(f, "%[^;]", line);
-  printf("%s\n", line);
-  fclose(f);
-  printf("yes or no");
-  scanf("%d", &temp);
-  
-  lineNumber = x;
+  //fscanf(f, "%[^;]", line);
+  //printf("%s\n", line);
+  //fclose(f);
+  //printf("yes or no");
+  //scanf("%d", &temp);
   
   FILE *f = fopen(fileList[col], "r");
   if ( f != NULL )
   {
       while (fgets(line_max, 6, f) != NULL) /* read a line */
       {
-          if (loop_cnt == line_number)
+          if (loop_cnt == row)
           {
             printf("%s\n", line_max);
               //use line or in a function return it
@@ -39,11 +37,13 @@ void printQuestion(int row, int col)
               ++loop_cnt;
           }
       }
-      fclose(file);
+      fclose(f);
   }
   else
   {
       //file doesn't exist
     printf("Error opening file.\n")
   }
+  printf("yes or no");
+  scanf("%d", &temp);
 }
