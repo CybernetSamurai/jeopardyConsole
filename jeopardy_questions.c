@@ -24,9 +24,11 @@ void printQuestion(int row, int col) {
    else {
       while (fgets(line_max, 1000, f) != NULL) {
          if (loop_cnt == row) {
-            printf("%[^\n]", line_max);
+            //printf("%s\n", line_max);
             //use line or in a function return it
             //in case of a return first close the file with "fclose(file);"
+            fclose(f);
+            return line_max;
          }
          else {
             ++loop_cnt;
