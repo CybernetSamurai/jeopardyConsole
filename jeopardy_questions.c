@@ -24,8 +24,7 @@ void printQuestion(int row, int col) {
    }
    else {
       while (fgets(line, 300, f) != NULL) {
-         line_list[loop_cnt] = line;
-         ++loop_cnt;
+         printf("%s\n", line)
          //if (loop_cnt == row) {
          //   printf("%s\n", line);
          //   //use line or in a function return it
@@ -36,7 +35,6 @@ void printQuestion(int row, int col) {
          //}
       }
       fclose(f);
-      printf("%s\n", line_list[1]);
    }
    printf("yes or no");
    scanf("%d", &temp);
