@@ -21,7 +21,6 @@ int main(void)
 {
     bool check = true;
     int rowSelect = 100, colSelect = 100, pointSelect = 0;
-    char question[100];
     int arraySelect[ROWS][COLS] = 
     {
         {0, 0, 0, 0, 0, 0},
@@ -69,7 +68,7 @@ int main(void)
         }
         arraySelect[rowSelect][colSelect] = 1;
         clearScreen();
-        question = printQuestion(rowSelect, colSelect);
+        printQuestion(rowSelect, colSelect);
         printf("%s\n", &question);
         
     }
