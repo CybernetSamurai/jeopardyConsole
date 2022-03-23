@@ -39,7 +39,7 @@ void printQuestion(int row, int col) {
          //}
       }
       fclose(f);
-      printf("%s\n", line_list[1]);
+      printf("%s\n", line_list[0]);
    }
    printf("yes or no");
    scanf("%d", &temp);
