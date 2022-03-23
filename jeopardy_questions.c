@@ -42,7 +42,7 @@ void printQuestion(int row, int col)
   else
   {
       //file doesn't exist
-    printf("Error opening file.\n")
+    printf("Error opening file.\n");
   }
   printf("yes or no");
   scanf("%d", &temp);
