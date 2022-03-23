@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+#define MAX_STR_LEN 250
+
 void printQuestion(int row, int col) {
    int temp, loop_cnt = 0;
-   char line[250];
+   char line[MAX_STR_LEN];
    char file_list[6][14] = {
                               "category1.txt",
                               "category2.txt",
@@ -12,7 +14,7 @@ void printQuestion(int row, int col) {
                               "category5.txt",
                               "category6.txt"
                           };
-   char line_list[5][300];
+   char line_list[5][MAX_STR_LEN];
   
    //fscanf(f, "%[^;]", line);
    //printf("%s\n", line);
@@ -24,7 +26,7 @@ void printQuestion(int row, int col) {
       printf("Error opening file.\n");
    }
    else {
-      while (fgets(line, 300, f) != NULL) {
+      while (fgets(line, MAX_STR_LEN, f) != NULL) {
          strcpy(line_list[loop_cnt], line);
          ++loop_cnt;
       }
