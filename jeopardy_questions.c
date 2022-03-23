@@ -25,22 +25,12 @@ void printQuestion(int row, int col) {
    }
    else {
       while (fgets(line, 300, f) != NULL) {
-         //printf("%s\n", line);
          strcpy(line_list[loop_cnt], line);
          ++loop_cnt;
-         //printf("hello\n");
-         //if (loop_cnt == row) {
-         //   printf("%s\n", line);
-         //   //use line or in a function return it
-         //   //in case of a return first close the file with "fclose(file);"
-         //}
-         //else {
-         //   ++loop_cnt;
-         //}
       }
       fclose(f);
-      printf("%s\n", line_list[0]);
    }
+   printf("%s\n", line_list[row]);
    printf("yes or no");
    scanf("%d", &temp);
 }
