@@ -5,12 +5,12 @@ void printQuestion(int row, int col)
   int temp;
   char line[1000];
   char fileList[6][10] = {
-                            "category1",
-                            "category2",
-                            "category3",
-                            "category4",
-                            "category5",
-                            "category6"
+                            "category1.txt",
+                            "category2.txt",
+                            "category3.txt",
+                            "category4.txt",
+                            "category5.txt",
+                            "category6.txt"
                          };
   
   //printf("%s\n", fileList[col]);
