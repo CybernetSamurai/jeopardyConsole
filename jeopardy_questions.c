@@ -1,3 +1,6 @@
+// Resource:
+// https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
+
 #include <stdio.h>
 #include <string.h>
 
@@ -6,6 +9,7 @@
 void printQuestion(int row, int col) {
    int temp, loop_cnt = 0;
    char line[MAX_STR_LEN];
+   char line_list[5][MAX_STR_LEN];
    char file_list[6][14] = {
                               "category1.txt",
                               "category2.txt",
@@ -14,13 +18,7 @@ void printQuestion(int row, int col) {
                               "category5.txt",
                               "category6.txt"
                           };
-   char line_list[5][MAX_STR_LEN];
-  
-   //fscanf(f, "%[^;]", line);
-   //printf("%s\n", line);
    
-   // Resource:
-   // https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
    FILE *f = fopen(file_list[col], "r");
    if ( f == NULL ) {
       printf("Error opening file.\n");
@@ -32,6 +30,7 @@ void printQuestion(int row, int col) {
       }
       fclose(f);
    }
+   
    printf("%s\n", line_list[row]);
    printf("yes or no");
    scanf("%d", &temp);
