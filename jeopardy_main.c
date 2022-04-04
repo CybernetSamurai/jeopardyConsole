@@ -77,7 +77,8 @@ int main(void)
 
 bool colSelectValidation(int col) {
     bool check = true;
-    for (int i = 0; i < 6; ++i) {
+    int i = 0;
+    for (i = 0; i < 6; ++i) {
         if (col != i)
             check = false;
     }
@@ -86,7 +87,8 @@ bool colSelectValidation(int col) {
 
 bool pointSelectValidaion(int point) {
     bool check = true;
-    for (int i = 200; i < 1001; i+=200) {
+    int i = 200;
+    for (i = 200; i < 1001; i+=200) {
         if (point != i)
             check = false;
     }
