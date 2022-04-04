@@ -12,6 +12,8 @@
 #define ROWS 5
 #define COLS 6
 
+bool colSelectValidation(int col);
+bool pointSelectValidation(int pointSelect);
 void setBlue();
 void setYellow();
 void printBoard();
@@ -38,7 +40,7 @@ int main(void)
         {1000, 1000, 1000, 1000, 1000, 1000}
     };
     
-    while (check) {
+    do {
         clearScreen();
         setBlue();
         printBoard(arrayPoints, arraySelect);
@@ -70,7 +72,25 @@ int main(void)
         clearScreen();
         printQuestion(rowSelect, colSelect);
         
+    } while (!colSelectValidation(colSelect) || !pointSelectValidation(pointSelect))
+}
+
+bool colSelectValidation(int col) {
+    bool check = true;
+    for (int i = 0; i < 6; ++i) {
+        if (col != i)
+            check = false;
     }
+    return check;
+}
+
+bool pointSelectValidaion(int point) {
+    bool check = true;
+    for (int i = 200; i < 1001; i+=200) {
+        if (point != i)
+            check = false;
+    }
+    return check;
 }
 
 void setBlue() {
