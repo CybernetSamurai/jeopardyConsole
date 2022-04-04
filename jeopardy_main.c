@@ -83,7 +83,7 @@ bool colSelectValidation(int col) {
     return check;
 }
 
-bool pointSelectValidaion(int point) {
+bool pointSelectValidation(int point) {
     bool check = true;
     int i = 200;
     for (i = 200; i < 1001; i+=200)
