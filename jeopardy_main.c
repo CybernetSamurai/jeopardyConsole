@@ -1,7 +1,7 @@
 /**************************************
 * File:     jeopardy_main.c
-* Group:  
-* Version:  1.0
+* Group:    Jeopardy Game
+* Authors:  Jacob, Jackson, Annabelle
 **************************************/
 
 #include <stdio.h>
