@@ -72,26 +72,22 @@ int main(void)
         clearScreen();
         printQuestion(rowSelect, colSelect);
         
-    } while (!colSelectValidation(colSelect) || !pointSelectValidation(pointSelect))
+    } while (!colSelectValidation(colSelect) || !pointSelectValidation(pointSelect));
 }
 
 bool colSelectValidation(int col) {
     bool check = true;
     int i = 0;
-    for (i = 0; i < 6; ++i) {
-        if (col != i)
-            check = false;
-    }
+    for (i = 0; i < 6; ++i)
+        if (col != i) check = false;
     return check;
 }
 
 bool pointSelectValidaion(int point) {
     bool check = true;
     int i = 200;
-    for (i = 200; i < 1001; i+=200) {
-        if (point != i)
-            check = false;
-    }
+    for (i = 200; i < 1001; i+=200)
+        if (point != i) check = false;
     return check;
 }
 
