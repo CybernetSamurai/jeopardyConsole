@@ -7,22 +7,24 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <string.h>
 #include "jeopardy_questions.h"
 
 #define ROWS 5
 #define COLS 6
 
+int mainMenuUserInput(char* type);
 bool colSelectValidation(int col);
 bool pointSelectValidation(int pointSelect);
-void setBlue();
-void setYellow();
+void setColor(char* color);
 void printBoard();
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
+int convertPointsSelected(int points);
 
 int main(void)
 {
     bool check = true;
-    int rowSelect = 100, colSelect = 100, pointSelect = 0;
+    int rowSelected, colSelected, ptsSelected;
     int arraySelect[ROWS][COLS] = 
     {
         {0, 0, 0, 0, 0, 0},
@@ -39,66 +41,110 @@ int main(void)
         {800, 800, 800, 800, 800, 800},
         {1000, 1000, 1000, 1000, 1000, 1000}
     };
-    
-    do {
-        clearScreen();
-        setBlue();
-        printBoard(arrayPoints, arraySelect);
-        printf("Catagory Num: ");
-        scanf("%d", &colSelect);
-        colSelect-=1;
-        printf("Points: ");
-        scanf("%d", &pointSelect);
-        switch (pointSelect) {
-            case 200:
-                rowSelect = 0;
-                break;
-            case 400:
-                rowSelect = 1;
-                break;
-            case 600:
-                rowSelect = 2;
-                break;
-            case 800:
-                rowSelect = 3;
-                break;
-            case 1000:
-                rowSelect = 4;
-                break;
-            default:
-                printf("Error\n");
-        }
-        arraySelect[rowSelect][colSelect] = 1;
-        clearScreen();
-        printQuestion(rowSelect, colSelect);
-        
-    } while (!colSelectValidation(colSelect) || !pointSelectValidation(pointSelect));
+
+    while (check) {    
+        do {
+            clearScreen();
+
+            setColor("Blue");
+
+            printBoard(arrayPoints, arraySelect);
+
+            colSelected = mainMenuUserInput("Catagory");
+            colSelected -= 1;
+
+            ptsSelected = mainMenuUserInput("Points");
+
+        } while (!colSelectValidation(colSelected) || !pointSelectValidation(ptsSelected));
+
+            rowSelected = convertPointsSelected(ptsSelected);
+
+            arraySelect[rowSelected][colSelected] = 1;
+
+            clearScreen();
+
+            getQuestionAnswer(rowSelected, colSelected);
+    }
 }
 
+// Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
+// Request User Input for Catagory and Point Values
+// If Input != int, Set Default to 0
+int mainMenuUserInput(char* type) {
+    int value, scanVal;
+
+    printf("%s: ", type);
+    scanVal = scanf("%d", &value);
+    if (scanVal != 1) {
+        getchar();
+        value = 0;
+    }        
+
+    return value;
+}
+
+// Convert User Point Input to Related Row Value
+int convertPointsSelected(int points) {
+    int row;
+    switch (points) {
+        case 200:
+            row = 0;
+            break;
+        case 400:
+            row = 1;
+            break;
+        case 600:
+            row = 2;
+            break;
+        case 800:
+            row = 3;
+            break;
+        case 1000:
+            row = 4;
+            break;
+        default:
+            printf("Error Converting Points\n");
+    }
+    return row;
+}
+
+// Change Output Colors
+// - setColor("Blue") for blue
+// - setColor("Yellow") for yellow
+void setColor(char* color) {
+    if (strcmp(color, "Blue")) {
+        printf("\033[0;33m");
+    }
+    if (strcmp(color, "Yellow")) {
+        printf("\033[0;34m");
+    }
+}
+
+// Validate Input Column Value is Legal
 bool colSelectValidation(int col) {
-    bool check = true;
+    bool check = false;
     int i = 0;
-    for (i = 0; i < 6; ++i)
-        if (col != i) check = false;
+
+    for (i = 0; i < 6; ++i) {
+        if (col == i) check = true;
+    }
+
     return check;
 }
 
-bool pointSelectValidation(int point) {
-    bool check = true;
+// Validate Input Point Value is Legal
+bool pointSelectValidation(int points) {
+    bool check = false;
     int i = 200;
-    for (i = 200; i < 1001; i+=200)
-        if (point != i) check = false;
+
+    for (i = 200; i < 1001; i+=200) {
+        if (points == i) check = true;
+    }
+
     return check;
 }
 
-void setBlue() {
-    printf("\033[0;34m");
-}
-
-void setYellow() {
-    printf("\033[0;33m");
-}
-
+// Print Main Game Board
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     int i = 0, j = 0;
     // Website: https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Doom&text=Jeopardy
@@ -120,50 +166,21 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
-                setYellow();
+                setColor("Yellow");
                 printf("%4d    ", arrayPoints[i][j]);
             }
             else {
-                setBlue();
+                setColor("Blue");
                 printf("%4d    ", arrayPoints[i][j]);
             }
         }
         printf("\n\n");
     }
-    setBlue();
+    setColor("Blue");
     printf("--------------------------------------------\n");
 }
 
+// Clear Game Screen
 void clearScreen() {
     printf("\e[2J\e[H");
 }
-
-//void printQuestion(int row, int col) {
-//    char testQuestion[100] = "What is the meaning of life?";
-//    int test;
-//    
-//    printf(" _____       _                                       \n"
-//           "/  __ \\     | |                                     \n"
-//           "| /  \\/ __ _| |_ ___  __ _  ___  _ __ _   _         \n"
-//           "| |    / _` | __/ _ \\/ _` |/ _ \\| '__| | | |       \n"
-//           "| \\__/\\ (_| | ||  __/ (_| | (_) | |  | |_| |        \n"
-//           " \\____/\\__,_|\\__\\___|\\__, |\\___/|_|   \\__, |   \n"
-//           "                      __/ |            __/ |         \n"
-//           "                     |___/            |___/          \n"
-//           "     _   _____  _____  _____                         \n"
-//           "    | | / __  \\|  _  ||  _  |                       \n"
-//           "   / __)`' / /'| |/' || |/' |                        \n"
-//           "   \\__ \\  / /  |  /| ||  /| |                      \n"
-//           "   (   /./ /___\\ |_/ /\\ |_/ /                      \n"
-//           "    |_| \\_____/ \\___/  \\___/                      \n");
-//    printf("--------------------------------------------         \n");
-//                                            
-//                                                       
-//                                            
-//                                            
-//    printf("%s\n", &testQuestion);
-//    printf("Yes or no ");
-//    scanf("%d", &test);
-//}
-
-
