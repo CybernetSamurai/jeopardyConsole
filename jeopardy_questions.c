@@ -6,12 +6,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define MAX_STR_LEN 250
-#define FILE_NUM 6
-#define FILE_LEN 14
-#define QUESTION_CNT 5
-#define QUESTION_TIME 10
-#define BOARD_WIDTH 44
+//#define MAX_STR_LEN 250
+//#define FILE_NUM 6
+//#define FILE_LEN 14
+//#define QUESTION_CNT 5
+//#define QUESTION_TIME 10
+//#define BOARD_WIDTH 44
 
 char line_list[QUESTION_CNT][MAX_STR_LEN];
 char QuestionAnswer[2][MAX_STR_LEN];
