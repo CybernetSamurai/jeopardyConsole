@@ -10,7 +10,7 @@
 #include <string.h>
 #include "jeopardy_main.h"
 
-void highlightNumber(int input);
+void highlightNumber(int input, char* color);
 
 // Global Variables for Team Scores
 int Team_One = 0;
@@ -179,6 +179,9 @@ void setColor(char* color) {
     else if (strcmp(color, "White") == 0) {
         printf("\033[0;37m");
     }
+    else if (strcmp(color, "Red") == 0) {
+        printf("\033[0;31m");
+    }
 }
 
 // Validate Input Column Value is Legal
@@ -237,15 +240,15 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     setColor("Blue");
     printf("---------------------------------------------------------\n"
            " ---------- Team One [");
-    highlightNumber(1);
+    highlightNumber(1, "Red");
     printf("] ------- Team Two [");
-    highlightNumber(2);
+    highlightNumber(2, "Red");
     printf("] ---------- \n"
            "---------------------------------------------------------\n");
 }
 
-void highlightNumber(int input) {
-    setColor("White");
+void highlightNumber(int input, char* color) {
+    setColor(color);
     printf("%d", input);
     setColor("Blue");
 }
