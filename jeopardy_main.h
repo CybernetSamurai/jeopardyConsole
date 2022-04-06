@@ -11,7 +11,7 @@ int mainMenuUserInput(char* type);
 bool colSelectValidation(int col);
 bool pointSelectValidation(int points);
 void setColor(char* color);
-void highlightChar(int input);
+int highlightChar(int input);
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
