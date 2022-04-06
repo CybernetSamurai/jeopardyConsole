@@ -13,12 +13,13 @@ void setColor(char* color);
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
+bool gameOverCheck(int arraySelect[ROWS][COLS]);
 
 #define MAX_STR_LEN 250
 #define FILE_NUM 6
 #define FILE_LEN 14
 #define QUESTION_CNT 5
-#define QUESTION_TIME 5
+#define QUESTION_TIME 1
 #define BOARD_WIDTH 44
 
 void selectCatagoryFile(int col);
