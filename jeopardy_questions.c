@@ -64,14 +64,12 @@ void getQuestionAnswerArray(int col, int row) {
 // Print Corresponding Question
 void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
-    char Question[MAX_STR_LEN];
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
         printf("Timer: %01d\n", timer);
         printf("--------------------------------------------\n\n\n\n\n");
-        Question = wrap(QuestionAnswer[0], BOARD_WIDTH);
-        //printf("%s\n", QuestionAnswer[0]);
-        printf("%s\n", Question);
+        wrap(QuestionAnswer[0], BOARD_WIDTH);
+        printf("%s\n", QuestionAnswer[0]);
         printf("\n\n\n\n\n--------------------------------------------\n"
                "--------------------------------------------\n"
                "--------------------------------------------\n");
