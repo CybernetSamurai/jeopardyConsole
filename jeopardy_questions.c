@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "jeopardy_main.h"
 
 //#define MAX_STR_LEN 250
 //#define FILE_NUM 6
