@@ -10,6 +10,8 @@
 #include <string.h>
 #include "jeopardy_main.h"
 
+int highlightNumber();
+
 // Global Variables for Team Scores
 int Team_One = 0;
 int Team_Two = 0;
@@ -234,8 +236,14 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("---------------------------------------------------------\n"
-           " ---------- Team One [1] ------- Team Two [2] ---------- \n"
-           "---------------------------------------------------------\n");
+           " ---------- Team One [%d] ------- Team Two [%d] ---------- \n"
+           "---------------------------------------------------------\n", highlightNumber(1), highlightNumber(2));
+}
+
+int highlightNumber(int input) {
+    setColor("White");
+    return input;
+    setColor("Blue");
 }
 
 // Clear Game Screen
