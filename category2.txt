@@ -1,5 +1,5 @@
-What movie is the Character Shrek from?;Shrek
-What potion did shrek take to turn human in Shrek 2?;Happily Ever After
-Where does the muffin man live in shrek?;Drury lane
+Where does the muffin man in Shrek live?;Drury Lane
+In the movie Mulan, what is the name of the group they are fighting?;The Huns
+What is the name of the shark that tries to eat Marlin and Dory in Nemo?;Bruce
 What legendary hold did Po use in Kung Fu Panda 1?;The Wuxi Finger Hold
-What does Po say when he uses the legendary hold in Kung Fu Panda 1?;Skadoosh
+Who kidnapped Repunzel from the king and queen in the movie Tangled?;Mother Gothel
