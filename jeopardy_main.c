@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <string.h>
 #include "jeopardy_questions.h"
+#include "jeopardy_main.h"
 
 #define ROWS 5
 #define COLS 6
