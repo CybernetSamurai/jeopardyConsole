@@ -180,10 +180,11 @@ void setColor(char* color) {
 }
 
 // Hightlights Characters in white
-void hightlightChar(int input) {
+int hightlightChar(int input) {
     setColor("White");
     printf("%d", input);
     setColor("Blue");
+    return input;
 }
 
 // Validate Input Column Value is Legal
@@ -241,7 +242,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("---------------------------------------------------------\n"
-           " ---------- Team One [%c] ------- Team Two [%c] ---------- \n"
+           " ---------- Team One [%d] ------- Team Two [%d] ---------- \n"
            "---------------------------------------------------------\n", highlightChar('1'), highlightChar('2'));
 }
 
