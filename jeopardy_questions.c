@@ -68,8 +68,12 @@ void printQuestion(int col, int row) {
         getQuestionAnswerArray(col, row);
         printf("Timer: %01d\n", timer);
         printf("--------------------------------------------\n\n\n\n\n");
-        printf("%s\n", QuestionAnswer[0]);
-        printf("\n\n\n\n\n--------------------------------------------\n\n");
+        Question = wrap(QuestionAnswer[0], BOARD_WIDTH);
+        //printf("%s\n", QuestionAnswer[0]);
+        printf("%s\n", Question);
+        printf("\n\n\n\n\n--------------------------------------------\n"
+               "--------------------------------------------\n"
+               "--------------------------------------------\n");
         sleep(1);
         --timer;
         clearScreen();
@@ -133,3 +137,28 @@ void outputFormat(int col, int row, int type) {
     }    
 }
 */
+// Reference: https://stackoverflow.com/questions/22582989/word-wrap-program-c
+inline int word_length(const char* input) {
+    int tempindex=0;
+    while (input[tempindex] != ' ' && input[tempindex] != 0 && input[tempindex] != '\n') {
+        ++tempindex;
+    }
+    return tempindex;
+}
+void wrap(char * string, const int wrapline) {
+    int index = 0;
+    int curlinelen = 0;
+    while (string[index] != '\0') {
+        if (string[index] == '\n') {
+            curlinelen=0;
+        }
+        else if (string[index] == ' ') {
+            if (curlinelen + word_length(&string[index + 1]) >= wrapline) {
+                string[index] = '\n';
+                curlinelen = 0;
+            }
+        }
+        curlinelen++;
+        index++;
+    }
+}
