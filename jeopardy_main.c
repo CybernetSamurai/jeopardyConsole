@@ -242,9 +242,9 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
         printf("\n\n");
     }
     setColor("Blue");
-    printf("---------------------------------------------------------\n"
+    printf("=========================================================\n"
            " ---------- Team One ["); HL(1, "Cyan"); printf("] ------- Team Two ["); HL(2, "Cyan"); printf("] ---------- \n"
-           "---------------------------------------------------------\n");
+           "=========================================================\n");
 }
 
 void HL(int input, char* color) {
