@@ -202,19 +202,19 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Website: https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Doom&text=Jeopardy
     // Font: Doom
     // Character Width/Height: Default
-    printf("       ___                                _       \n"
-           "      |_  |                              | |      \n"
-           "        | | ___  ___  _ __   __ _ _ __ __| |_   _ \n"
-           "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |\n"
-           "    /\\__/ /  __/ (_) | |_) | (_| | | | (_| | |_| |\n"
-           "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, |\n"
-           "                     | |                     __/ |\n"
-           "                     |_|                    |___/ \n");
+    printf("       ___                                _              \n"
+           "      |_  |                              | |             \n"
+           "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
+           "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |    \n"
+           "    /\\__/ /  __/ (_) | |_) | (_| | | | (_| | |_| |      \n"
+           "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
+           "                     | |                     __/ |       \n"
+           "                     |_|                    |___/        \n");
     printf("---------------------------------------------------------\n"
            "          Team One: %04d        Team Two: %04d           \n"
            "---------------------------------------------------------\n"
            " HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n" //57
-        // "CAT1    CAT2    CAT3    CAT4    CAT5    CAT6\n"
+           "  [1]        [2]       [3]      [4]       [5]      [6]   \n"
            "---------------------------------------------------------\n\n", Team_One, Team_Two);
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
