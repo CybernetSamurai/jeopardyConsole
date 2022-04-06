@@ -96,46 +96,6 @@ int printAnswer(int col, int row) {
 }
 
 // Formats output within 44 sized desired space
-// Type 0 == Question
-// Type 1 == Answer
-/*
-void outputFormat(int col, int row, int type) {
-    int i = 0, j = 0, k = 0, l = 0;
-    getQuestionAnswerArray(col, row);
-    char Question[MAX_STR_LEN];
-    strcpy(Question, QuestionAnswer[0]);
-    char Answer[MAX_STR_LEN];
-    strcpy(Answer, QuestionAnswer[1]);
-
-    while (Question[i] != '\0') {
-        if (Question[i] == ' ') {
-            j = i % BOARD_WIDTH;
-            l = i + 1;
-            while (Question[l] != ' ') {
-                if (j == BOARD_WIDTH)  {
-                    printf("%c", Question[i]);
-                    printf("\n");
-                    k = 0;
-                    i += 1;
-                    break;
-                }
-                ++l;
-                ++j;
-            }
-        }
-        if (k == BOARD_WIDTH) {
-            printf("%c", Question[i]);
-            printf("\n");
-            k = 0;
-        }
-        else {
-            printf("%c", Question[i]);
-        }
-        ++k;
-        ++i;
-    }    
-}
-*/
 // Reference: https://stackoverflow.com/questions/22582989/word-wrap-program-c
 inline int word_length(const char* input) {
     int tempindex=0;
