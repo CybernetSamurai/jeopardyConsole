@@ -69,13 +69,13 @@ int main(void) {
                 clearScreen();
                 selection = printAnswer(colSelected, rowSelected);
             }
-            addPoints(teamNumber, ptsSelected, selection);
+            updatePoints(teamNumber, ptsSelected, selection);
         }    
     }
 }
 
 // add points to team scores
-void addPoints(int teamNumber, int ptsSelected, int selection) {
+void updatePoints(int teamNumber, int ptsSelected, int selection) {
     if (selection == 1 && teamNumber == 1) {
         Team_One += ptsSelected;
         if (Team_One >= MAX_PTS) {
