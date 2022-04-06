@@ -179,14 +179,6 @@ void setColor(char* color) {
     }
 }
 
-// Hightlights Characters in white
-int highlightNumber(int input) {
-    setColor("White");
-    printf("%d", input);
-    setColor("Blue");
-    return input;
-}
-
 // Validate Input Column Value is Legal
 bool colSelectValidation(int col) {
     bool check = false;
@@ -242,8 +234,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("---------------------------------------------------------\n"
-           " ---------- Team One [%d] ------- Team Two [%d] ---------- \n"
-           "---------------------------------------------------------\n", highlightNumber(1), highlightNumber(2));
+           " ---------- Team One [1] ------- Team Two [2] ---------- \n"
+           "---------------------------------------------------------\n");
 }
 
 // Clear Game Screen
