@@ -91,7 +91,21 @@ int main(void) {
             }
             addPoints(teamNumber, ptsSelected, selection);
         }    
+        check = gameOverCheck(arraySelect[ROWS][COLS]);
     }
+}
+
+bool gameOverCheck(int arraySelect[ROWS][COLS]) {
+    bool check = true;
+    int i, j;
+    for (i = 0; i < ROWS; ++i) {
+        for (j = 0; j < COLS; ++j) {
+            if (!arraySelect[i][j]) {
+                check = false;
+            }
+        }
+    }
+    
 }
 
 // add points to team scores
