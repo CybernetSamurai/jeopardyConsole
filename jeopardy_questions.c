@@ -145,7 +145,7 @@ inline int word_length(const char* input) {
     }
     return tempindex;
 }
-void wrap(char * string, const int wrapline) {
+void wrap(char* string, const int wrapline) {
     int index = 0;
     int curlinelen = 0;
     while (string[index] != '\0') {
