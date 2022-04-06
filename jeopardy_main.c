@@ -12,7 +12,15 @@
 
 #define ROWS 5
 #define COLS 6
+#define MAX_PTS 9999
 
+bool optionSelectionValidation();
+void addPoints();
+bool printAnswerValidation();
+void saveEnteredData();
+void resetBoard();
+int teamSelect();
+bool teamSelectValidation();
 int mainMenuUserInput(char* type);
 bool colSelectValidation(int col);
 bool pointSelectValidation(int pointSelect);
@@ -21,10 +29,14 @@ void printBoard();
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
 
-int main(void)
-{
-    bool check = true;
-    int rowSelected, colSelected, ptsSelected;
+// Global Variables for Team Scores
+int Team_One = 0;
+int Team_Two = 0;
+
+// Main
+int main(void) {
+    bool check = true; 
+    int rowSelected, colSelected, ptsSelected, timer, teamNumber, selection;
     int arraySelect[ROWS][COLS] = 
     {
         {0, 0, 0, 0, 0, 0},
@@ -41,45 +53,120 @@ int main(void)
         {800, 800, 800, 800, 800, 800},
         {1000, 1000, 1000, 1000, 1000, 1000}
     };
-
     while (check) {    
-        do {
-            clearScreen();
+        resetBoard(arrayPoints, arraySelect);
+        teamNumber = mainMenuUserInput("Team Select");
+        while (!optionSelectionValidation(teamNumber)) {
+            resetBoard(arrayPoints, arraySelect);
+            teamNumber = mainMenuUserInput("Team Select");
+        }
 
-            setColor("Blue");
-
-            printBoard(arrayPoints, arraySelect);
-
+        colSelected = mainMenuUserInput("Catagory");
+        colSelected -= 1;
+        while (!colSelectValidation(colSelected)) {
+            resetBoard(arrayPoints, arraySelect);
+            saveEnteredData(teamNumber,0,0);
             colSelected = mainMenuUserInput("Catagory");
             colSelected -= 1;
+        }
 
+        ptsSelected = mainMenuUserInput("Points");
+        while (!pointSelectValidation(ptsSelected)) {
+            resetBoard(arrayPoints, arraySelect);
+            saveEnteredData(teamNumber,colSelected + 1,0);
             ptsSelected = mainMenuUserInput("Points");
+        }
 
-        } while (!colSelectValidation(colSelected) || !pointSelectValidation(ptsSelected));
-
-            rowSelected = convertPointsSelected(ptsSelected);
-
+        rowSelected = convertPointsSelected(ptsSelected);
+        if (arraySelect[rowSelected][colSelected] == 0) {
             arraySelect[rowSelected][colSelected] = 1;
-
             clearScreen();
-
-            getQuestionAnswer(rowSelected, colSelected);
+            printQuestion(colSelected, rowSelected);
+            clearScreen();
+            selection = printAnswer(colSelected, rowSelected);
+            while (!optionSelectionValidation(selection)) {
+                clearScreen();
+                selection = printAnswer(colSelected, rowSelected);
+            }
+            addPoints(teamNumber, ptsSelected, selection);
+        }    
     }
 }
+
+// add points to team scores
+void addPoints(int teamNumber, int ptsSelected, int selection) {
+    if (selection == 1 && teamNumber == 1) {
+        Team_One += ptsSelected;
+        if (Team_One >= MAX_PTS) {
+            Team_One = MAX_PTS;
+        }
+    }
+    else if (selection == 1 && teamNumber == 2) {
+        Team_Two += ptsSelected;
+        if (Team_Two >= MAX_PTS) {
+            Team_Two = MAX_PTS;
+        }
+    }
+}
+
+// Makes board look nicer if input validation fails
+void saveEnteredData(int team, int cat, int point) {
+    if (team != 0) {
+        printf("Team Select: %d\n", team);
+    }
+    if (cat != 0) {
+        printf("Catagory: %d\n", cat);
+    }
+    if (point != 0) {
+        printf("Points: %d\n", point);
+    }
+}
+
+// Reset Game Board
+void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
+    clearScreen();
+    setColor("Blue");
+    printBoard(arrayPoints, arraySelect);
+}
+
+// Validate selection between two options
+bool optionSelectionValidation(int selection) {
+    bool check = false;
+    if (selection == 1 || selection == 2) {
+        check = true;
+    }
+    return check;
+}
+
+// Validate user selection when printing answer
+//bool printAnswerValidation(int selection) {
+//    bool check = false;
+//    if (selection == 1 || selection == 2) {
+//        check = true;
+//    }
+//    return check;
+//}
+
+// validate team selection
+//bool teamSelectValidation(int team_number) {
+//    bool check = false;
+//    if (team_number == 1 || team_number == 2) {
+//        check = true;
+//    }
+//    return check;
+//}
 
 // Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
 // Request User Input for Catagory and Point Values
 // If Input != int, Set Default to 0
 int mainMenuUserInput(char* type) {
     int value, scanVal;
-
     printf("%s: ", type);
     scanVal = scanf("%d", &value);
     if (scanVal != 1) {
         getchar();
         value = 0;
     }        
-
     return value;
 }
 
@@ -112,11 +199,11 @@ int convertPointsSelected(int points) {
 // - setColor("Blue") for blue
 // - setColor("Yellow") for yellow
 void setColor(char* color) {
-    if (strcmp(color, "Blue")) {
-        printf("\033[0;33m");
-    }
-    if (strcmp(color, "Yellow")) {
+    if (strcmp(color, "Blue") == 0) {
         printf("\033[0;34m");
+    }
+    else if (strcmp(color, "Yellow") == 0) {
+        printf("\033[0;33m");
     }
 }
 
@@ -124,11 +211,9 @@ void setColor(char* color) {
 bool colSelectValidation(int col) {
     bool check = false;
     int i = 0;
-
     for (i = 0; i < 6; ++i) {
         if (col == i) check = true;
     }
-
     return check;
 }
 
@@ -136,11 +221,9 @@ bool colSelectValidation(int col) {
 bool pointSelectValidation(int points) {
     bool check = false;
     int i = 200;
-
     for (i = 200; i < 1001; i+=200) {
         if (points == i) check = true;
     }
-
     return check;
 }
 
@@ -158,11 +241,11 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "\\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, |\n"
            "                 | |                     __/ |\n"
            "                 |_|                    |___/ \n");
-
-
     printf("--------------------------------------------\n"
+           "    Team One: %04d      Team Two: %04d      \n"
+           "--------------------------------------------\n"
            "CAT1    CAT2    CAT3    CAT4    CAT5    CAT6\n"
-           "--------------------------------------------\n\n");
+           "--------------------------------------------\n\n", Team_One, Team_Two);
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
@@ -177,7 +260,9 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
         printf("\n\n");
     }
     setColor("Blue");
-    printf("--------------------------------------------\n");
+    printf("--------------------------------------------\n"
+           " ----- Team One [1] ---- Team Two [2] ----- \n"
+           "--------------------------------------------\n");
 }
 
 // Clear Game Screen
