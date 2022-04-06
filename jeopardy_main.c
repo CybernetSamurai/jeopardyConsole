@@ -11,6 +11,7 @@
 #include "jeopardy_main.h"
 
 void highlightNumber(int input, char* color);
+typedef highlightNumber HL;
 
 // Global Variables for Team Scores
 int Team_One = 0;
@@ -239,15 +240,15 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("---------------------------------------------------------\n"
-           " ---------- Team One ["); HLN(1, "Red"); printf("] ------- Team Two ["); HLN(2, "Red"); printf("] ---------- \n"
+           " ---------- Team One ["); HL(1, "Red"); printf("] ------- Team Two ["); HL(2, "Red"); printf("] ---------- \n"
            "---------------------------------------------------------\n");
 }
 
-typedef void highlightNumber(int input, char* color) {
+void highlightNumber(int input, char* color) {
     setColor(color);
     printf("%d", input);
     setColor("Blue");
-} HLN;
+}
 
 // Clear Game Screen
 void clearScreen() {
