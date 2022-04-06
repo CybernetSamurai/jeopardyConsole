@@ -4,7 +4,7 @@
 #define MAX_PTS 9999 // Maximum Number of Points a Team can Earn
 
 bool optionSelectionValidation(int selection);
-void addPoints(int teamNumber, int ptsSelected, int selection);
+void updatePoints(int teamNumber, int ptsSelected, int selection);
 void saveEnteredData(int team, int cat, int point);
 void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 int mainMenuUserInput(char* type);
