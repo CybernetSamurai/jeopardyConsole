@@ -180,9 +180,9 @@ void setColor(char* color) {
 }
 
 // Hightlights Characters in white
-void hightlightChar(char string) {
+void hightlightChar(int input) {
     setColor("White");
-    printf("%c", string);
+    printf("%d", input);
     setColor("Blue");
 }
 
