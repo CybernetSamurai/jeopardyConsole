@@ -184,6 +184,7 @@ void setColor(char* color) {
     }
     else if (strcmp(color, "Cyan") == 0) {
         printf("\033[0;36m");
+    }
 }
 
 // Validate Input Column Value is Legal
