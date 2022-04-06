@@ -180,7 +180,7 @@ void setColor(char* color) {
 }
 
 // Hightlights Characters in white
-int hightlightChar(int input) {
+int highlightNumber(int input) {
     setColor("White");
     printf("%d", input);
     setColor("Blue");
@@ -243,7 +243,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     setColor("Blue");
     printf("---------------------------------------------------------\n"
            " ---------- Team One [%d] ------- Team Two [%d] ---------- \n"
-           "---------------------------------------------------------\n", highlightChar('1'), highlightChar('2'));
+           "---------------------------------------------------------\n", highlightNumber('1'), highlightNumber('2'));
 }
 
 // Clear Game Screen
