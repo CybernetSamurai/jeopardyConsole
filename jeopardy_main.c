@@ -220,11 +220,11 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
                 setColor("Yellow");
-                printf("  %4d   ", arrayPoints[i][j]);
+                printf(" %4d    ", arrayPoints[i][j]);
             }
             else {
                 setColor("Blue");
-                printf("  %4d    ", arrayPoints[i][j]);
+                printf(" %4d    ", arrayPoints[i][j]);
             }
         }
         printf("\n\n");
