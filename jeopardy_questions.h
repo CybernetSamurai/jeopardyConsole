@@ -5,7 +5,7 @@
 #define QUESTION_TIME 10
 #define BOARD_WIDTH 44
 
-void selectCatagoryFile(int col);
+void selectCategoryFile(int col);
 void getQuestionAnswerArray(int col, int row);
 void printQuestion(int col, int row);
 int printAnswer(int col, int row);
