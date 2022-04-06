@@ -139,24 +139,6 @@ bool optionSelectionValidation(int selection) {
     return check;
 }
 
-// Validate user selection when printing answer
-//bool printAnswerValidation(int selection) {
-//    bool check = false;
-//    if (selection == 1 || selection == 2) {
-//        check = true;
-//    }
-//    return check;
-//}
-
-// validate team selection
-//bool teamSelectValidation(int team_number) {
-//    bool check = false;
-//    if (team_number == 1 || team_number == 2) {
-//        check = true;
-//    }
-//    return check;
-//}
-
 // Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
 // Request User Input for Catagory and Point Values
 // If Input != int, Set Default to 0
