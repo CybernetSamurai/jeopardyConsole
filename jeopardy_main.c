@@ -82,11 +82,17 @@ void addPoints(int teamNumber, int ptsSelected, int selection) {
             Team_One = MAX_PTS;
         }
     }
+    else if (selection == 2 && teamNumber == 1) {
+        Team_One -= ptsSelected;
+    }
     else if (selection == 1 && teamNumber == 2) {
         Team_Two += ptsSelected;
         if (Team_Two >= MAX_PTS) {
             Team_Two = MAX_PTS;
         }
+    }
+    else if (selection == 2 && teamNumber == 2) {
+        Team_Two -= ptsSelected;
     }
 }
 
