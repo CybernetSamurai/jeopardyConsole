@@ -87,6 +87,7 @@ int printAnswer(int col, int row) {
     int selection;
     getQuestionAnswerArray(col, row);
     printf("\n--------------------------------------------\n\n\n\n\n");
+    wrap(QuestionAnswer[1], BOARD_WIDTH);
     printf("%s\n", QuestionAnswer[1]);
     printf("\n\n\n\n--------------------------------------------\n"
            " ----- Correct [1] ---- Incorrect [2] ----- \n"
