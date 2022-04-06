@@ -18,7 +18,7 @@ int convertPointsSelected(int points);
 #define FILE_NUM 6
 #define FILE_LEN 14
 #define QUESTION_CNT 5
-#define QUESTION_TIME 1
+#define QUESTION_TIME 10
 #define BOARD_WIDTH 44
 
 void selectCatagoryFile(int col);
