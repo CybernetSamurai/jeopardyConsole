@@ -210,11 +210,12 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "\\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, |\n"
            "                 | |                     __/ |\n"
            "                 |_|                    |___/ \n");
-    printf("--------------------------------------------\n"
-           "    Team One: %04d      Team Two: %04d      \n"
-           "--------------------------------------------\n"
-           "CAT1    CAT2    CAT3    CAT4    CAT5    CAT6\n"
-           "--------------------------------------------\n\n", Team_One, Team_Two);
+    printf("-------------------------------------------------------\n"
+           "          Team One: %04d      Team Two: %04d           \n"
+           "-------------------------------------------------------\n"
+           "HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION\n" //55
+        // "CAT1    CAT2    CAT3    CAT4    CAT5    CAT6\n"
+           "-------------------------------------------------------\n\n", Team_One, Team_Two);
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
@@ -229,9 +230,9 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
         printf("\n\n");
     }
     setColor("Blue");
-    printf("--------------------------------------------\n"
-           " ----- Team One [1] ---- Team Two [2] ----- \n"
-           "--------------------------------------------\n");
+    printf("-------------------------------------------------------\n"
+           " ---------- Team One [1] ----- Team Two [2] ---------- \n"
+           "-------------------------------------------------------\n");
 }
 
 // Clear Game Screen
