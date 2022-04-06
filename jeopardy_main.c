@@ -182,6 +182,8 @@ void setColor(char* color) {
     else if (strcmp(color, "Red") == 0) {
         printf("\033[0;31m");
     }
+    else if (strcmp(color, "Cyan") == 0) {
+        printf("\033[0;36m");
 }
 
 // Validate Input Column Value is Legal
@@ -222,8 +224,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "          Team One: %04d        Team Two: %04d           \n"
            "---------------------------------------------------------\n"
            " HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n" //57
-           "  [", Team_One, Team_Two); HL(1, "Red"); printf("]        ["); HL(2, "Red"); printf("]       ["); HL(3, "Red");
-           printf("]      ["); HL(4, "Red"); printf("]       ["); HL(5, "Red"); printf("]      ["); HL(6, "Red"); printf("]   \n"
+           "  [", Team_One, Team_Two); HL(1, "Cyan"); printf("]        ["); HL(2, "Cyan"); printf("]       ["); HL(3, "Cyan");
+           printf("]      ["); HL(4, "Cyan"); printf("]       ["); HL(5, "Cyan"); printf("]      ["); HL(6, "Cyan"); printf("]   \n"
            "---------------------------------------------------------\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
@@ -240,7 +242,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("---------------------------------------------------------\n"
-           " ---------- Team One ["); HL(1, "Red"); printf("] ------- Team Two ["); HL(2, "Red"); printf("] ---------- \n"
+           " ---------- Team One ["); HL(1, "Cyan"); printf("] ------- Team Two ["); HL(2, "Cyan"); printf("] ---------- \n"
            "---------------------------------------------------------\n");
 }
 
