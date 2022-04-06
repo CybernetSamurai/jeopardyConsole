@@ -11,7 +11,7 @@ char line_list[QUESTION_CNT][MAX_STR_LEN];
 char QuestionAnswer[2][MAX_STR_LEN];
 
 // Select Catagory File
-void selectCatagoryFile(int col) {
+void selectCategoryFile(int col) {
     int i = 0;
     char line[MAX_STR_LEN];
     char file_list[FILE_NUM][FILE_LEN] = {
@@ -39,7 +39,7 @@ void selectCatagoryFile(int col) {
 // Select Correct Question From Catagory File
 void getQuestionAnswerArray(int col, int row) {
     int i = 0, j = 0;
-    selectCatagoryFile(col);
+    selectCategoryFile(col);
     //QuestionAnswer;
     char fullString[MAX_STR_LEN]; //string containting question and answer separated by semicolon
     char question[MAX_STR_LEN];
