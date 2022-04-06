@@ -243,7 +243,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     setColor("Blue");
     printf("---------------------------------------------------------\n"
            " ---------- Team One [%d] ------- Team Two [%d] ---------- \n"
-           "---------------------------------------------------------\n", highlightNumber('1'), highlightNumber('2'));
+           "---------------------------------------------------------\n", highlightNumber(1), highlightNumber(2));
 }
 
 // Clear Game Screen
