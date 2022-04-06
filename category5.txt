@@ -1,5 +1,5 @@
-You're what harry?;Wizard
-Who created the one ring in lord of the rings?;Sauron
-What was Voldemort's real name?;Tom Marvolo Riddle
-What are the three forbidden curses in Harry Potter?;Killing Curse (Avada Kedavra) Cruciatus Curse (Crucio) Imperius Curse (Imperio)
-Who was Sauron's master (the first dark lord)?;Morgoth
+How many stones did Thanos need to collect?;Six infinity stones
+Who created the one ring in Lord of the Rings?;Sauron
+What District is Katniss Everdeen from?;District 12
+Who is Tony Stark's bodyguard?;"Happy" Hogan
+What are the three forbidden curses in Harry Potter?;Killing Curse (Avada Kedavra), Cruciatus Curse (Crucio), Imperius Curse (Imperio)
