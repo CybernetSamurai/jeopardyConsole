@@ -64,6 +64,7 @@ void getQuestionAnswerArray(int col, int row) {
 // Print Corresponding Question
 void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
+    char Question[MAX_STR_LEN];
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
         printf("Timer: %01d\n", timer);
