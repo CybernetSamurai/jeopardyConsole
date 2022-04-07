@@ -1,12 +1,11 @@
-// File IO Reference Used:
-// https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
-
 #include "jeopardy_main.h"
 
+// Global Variables for Functions
 char line_list[QUESTION_CNT][MAX_STR_LEN];
 char QuestionAnswer[2][MAX_STR_LEN];
 
 // Select Category File
+// File IO Reference Used: https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
 void selectCategoryFile(int col) {
     int i = 0;
     char line[MAX_STR_LEN];
@@ -19,10 +18,10 @@ void selectCategoryFile(int col) {
         "category6.txt"
     };
     char path[] = "Jeopardy_Categories/";
+    // Define Path for File IO
     strcat(path, file_list[col]);
-    
     FILE* f = fopen(path, "r");
-    // Open File, Save Each Line to List
+    // Open Category File, Save Each Line to List
     if ( f == NULL ) {
         printf("Error opening file.\n");
     }
@@ -39,18 +38,25 @@ void selectCategoryFile(int col) {
 void getQuestionAnswerArray(int col, int row) {
     int i = 0, j = 0;
     selectCategoryFile(col);
-    //QuestionAnswer;
-    char fullString[MAX_STR_LEN]; //string containting question and answer separated by semicolon
-    char question[MAX_STR_LEN];
-    char answer[MAX_STR_LEN];
+    //String Containting Question and Answer Separated by Semicolon
+    char fullString[MAX_STR_LEN];
     strcpy(fullString, line_list[row]);
+    // Empty String for Question
+    char question[MAX_STR_LEN];
+    // Empty String for Answer
+    char answer[MAX_STR_LEN];
+    // Nullify question/answer Strings
+    for (i = 0; i < MAX_STR_LEN; ++i) {
+        question[i] = '\0';
+        answer[i] = '\0';
+    }
     // Save the "Question" Part of the Line in Seperate Variable
     while (fullString[i] != ';') {
         question[i] = fullString[i];
         ++i;
     }
     question[i] = '\0';
-    ++i; // Skip the Semicolon when itterating through chars
+    ++i; // Skip the Semicolon when Itterating through chars
     // Save the "Answer" Part of the LIne in Seperate Varaiable
     while (fullString[i] != '\0') {
         answer[j] = fullString[i];
