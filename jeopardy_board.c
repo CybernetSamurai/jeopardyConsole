@@ -89,7 +89,6 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Font: Doom
     // Character Width/Height: Default
     printf("=========================================================\n");
-    //printf(" ------------------------------------------------------- \n");
     printf("=========================================================\n");
     setColor("Y");
     printf("       ___                                _              \n"
@@ -102,8 +101,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "                     |_|                    |___/        \n");
     setColor("B");
     printf("=========================================================\n");
-    printf(" -------- Team One: "); setColor("Y"); printf("%5d", Team_One); setColor("B"); printf(" ------ Team Two: ");
-            setColor("Y"); printf("%5d", Team_Two); setColor("B"); printf(" ------- \n");
+    printf(" -------- "); setColor("C"); printf("Team One: "); setColor("Y"); printf("%5d", Team_One); setColor("B"); 
+        printf(" ------ "); setColor("C"); printf("Team Two: "); setColor("Y"); printf("%5d", Team_Two); setColor("B"); printf(" ------- \n");
     printf("=========================================================\n");
     setColor("Y");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
@@ -125,7 +124,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
         printf("\n\n");
     }
     setColor("Blue");
-    printf("=========================================================\n"
-           " ---------- Team One ["); SNC(1, "C"); printf("] ------- Team Two ["); SNC(2, "C"); printf("] ---------- \n"
-           "=========================================================\n");
+    printf("=========================================================\n");
+    printf(" ---------- "); setColor("C"); printf("Team One ["); SNC(1, "C"); printf("] ------- Team Two ["); SNC(2, "C"); printf("] ---------- \n");
+    printf("=========================================================\n");
 }
