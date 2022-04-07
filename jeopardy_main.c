@@ -119,6 +119,7 @@ void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     printBoard(arrayPoints, arraySelect);
 }
 
+/*
 // Validate selection between two options
 bool optionSelectionValidation(int selection) {
     bool check = false;
@@ -127,6 +128,7 @@ bool optionSelectionValidation(int selection) {
     }
     return check;
 }
+*/
 
 // Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
 // Request User Input for Catagory and Point Values
@@ -195,6 +197,7 @@ void setColor(char* color) {
     }
 }
 
+/*
 // Validate Input Column Value is Legal
 bool colSelectValidation(int col) {
     bool check = false;
@@ -204,6 +207,7 @@ bool colSelectValidation(int col) {
     }
     return check;
 }
+*/
 
 // Validate Input Point Value is Legal
 bool pointSelectValidation(int points) {
