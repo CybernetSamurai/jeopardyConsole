@@ -92,7 +92,9 @@ int printAnswer(int col, int row) {
     wrap(QuestionAnswer[1], BOARD_WIDTH);
     printf("%s\n", QuestionAnswer[1]);
     printf("\n\n\n\n============================================\n");
-    printf(" ----- Correct [1] ---- Incorrect [2] ----- \n");
+    printf(" ----- "); setColor("Cyan"); printf("Correct"); setColor("Blue"); printf("["); setColor("Cyan"); printf("1"); setColor("Blue");
+        printf("] ---- "); setColor("Cyan"); printf("Incorrect"); setColor("Blue"); printf(" ["); setColor("Cyan"); printf("2"); setColor("Blue");
+        printf("] ----- \n");
     printf("============================================\n");
     selection = mainMenuUserInput("Make Selection");
     return selection;
