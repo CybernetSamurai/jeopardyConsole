@@ -23,7 +23,8 @@ void selectCategoryFile(int col) {
         "category5.txt",
         "category6.txt"
     };
-    FILE* f = fopen(file_list[col], "r");
+    char path[] = strcat("Jeopardy_Categories/", file_list[col]);
+    FILE* f = fopen(path, "r");
     // Open File, Save Each Line to List
     if ( f == NULL ) {
         printf("Error opening file.\n");
