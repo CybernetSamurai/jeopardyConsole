@@ -221,9 +221,9 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
            "                     | |                     __/ |       \n"
            "                     |_|                    |___/        \n");
-    printf("---------------------------------------------------------\n"
-           "          Team One: %04d        Team Two: %04d           \n"
-           "---------------------------------------------------------\n"
+    printf("=========================================================\n"
+           " -------- Team One: %04d ------- Team Two: %04d -------- \n"
+           "=========================================================\n"
            " HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n" //57
            "  [", Team_One, Team_Two); HL(1, "Cyan"); printf("]        ["); HL(2, "Cyan"); printf("]       ["); HL(3, "Cyan");
            printf("]      ["); HL(4, "Cyan"); printf("]       ["); HL(5, "Cyan"); printf("]      ["); HL(6, "Cyan"); printf("]   \n"
