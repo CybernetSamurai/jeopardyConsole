@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include <string.h>
+
 /* Definition and Prototype Function for jeopardy_main.c */
 #define ROWS 5       // Number of Point Selections
 #define COLS 6       // Number of Categories
