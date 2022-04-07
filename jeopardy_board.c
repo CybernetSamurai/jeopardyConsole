@@ -107,11 +107,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     SSC(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n", "Y", "B");
     
     SSC("  [", "B", "C"); printf("1"); SSC("]        [", "B", "C"); printf("2"); SSC("]       [", "B", "C"); printf("3");
-        SSC("]      [", "B", "C"); printf("4"); SSC("]       [", "B", "C"); printf("5"); SSC("]      [", "B", "C"); printf("6"); SSC("]   \n", "B", "B");
-    /*
-    printf("  ["); SNC(1, "C", "B"); printf("]        ["); SNC(2, "C", "B"); printf("]       ["); SNC(3, "C", "B");
-           printf("]      ["); SNC(4, "C", "B"); printf("]       ["); SNC(5, "C", "B"); printf("]      ["); SNC(6, "C", "B"); printf("]   \n");
-    */
+        SSC("]      [", "B", "C"); printf("4"); SSC("]       [", "B", "C"); printf("5"); SSC("]      [", "B", "C"); printf("6"); setColor("B"); 
+        printf("]   \n");
     printf("=========================================================\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
@@ -128,6 +125,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("=========================================================\n");
-    printf(" ---------- "); setColor("C"); printf("Team One ["); SNC(1, "C", "B"); printf("] ------- Team Two ["); SNC(2, "C", "B"); printf("] ---------- \n");
+    printf(" ---------- "); SSC("Team One", "C", "B"); printf(" ["); SNC(1, "C", "B"); printf("] ------- "); SSC("Team Two", "C", "B");
+        printf(" ["); SNC(2, "C", "B"); printf("] ---------- \n");
     printf("=========================================================\n");
 }
