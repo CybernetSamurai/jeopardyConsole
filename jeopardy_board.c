@@ -56,31 +56,6 @@ void updatePoints(int teamNumber, int ptsSelected, int selection) {
     }
 }
 
-// Convert User Point Input to Related Row Value
-int convertPointsSelected(int points) {
-    int row;
-    switch (points) {
-        case 200:
-            row = 0;
-            break;
-        case 400:
-            row = 1;
-            break;
-        case 600:
-            row = 2;
-            break;
-        case 800:
-            row = 3;
-            break;
-        case 1000:
-            row = 4;
-            break;
-        default:
-            printf("Error Converting Points\n");
-    }
-    return row;
-}
-
 /*****************************
 * Change Print Output Colors:
 * B for blue
