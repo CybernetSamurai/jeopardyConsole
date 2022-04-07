@@ -17,3 +17,12 @@ bool colSelectValidation(int col) {
     return check;
 }
 
+// Validate Input Point Value is Legal
+bool pointSelectValidation(int points) {
+    bool check = false;
+    int i = 200;
+    for (i = 200; i < 1001; i+=200) {
+        if (points == i) check = true;
+    }
+    return check;
+}
