@@ -66,13 +66,15 @@ void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
-        printf("Timer: %01d\n", timer);
-        printf("--------------------------------------------\n\n\n\n\n");
+        printf("Timer: "); setColor("Yellow"); printf("%01d\n", timer); setColor("Blue");
+        printf("============================================\n\n\n\n\n");
+        setColor("Yellow");
         wrap(QuestionAnswer[0], BOARD_WIDTH);
         printf("%s\n", QuestionAnswer[0]);
-        printf("\n\n\n\n\n--------------------------------------------\n"
+        setColor("Blue");
+        printf("\n\n\n\n\n============================================\n"
                "--------------------------------------------\n"
-               "--------------------------------------------\n");
+               "============================================\n");
         sleep(1);
         --timer;
         clearScreen();
@@ -86,12 +88,12 @@ void printQuestion(int col, int row) {
 int printAnswer(int col, int row) {
     int selection;
     getQuestionAnswerArray(col, row);
-    printf("\n--------------------------------------------\n\n\n\n\n");
+    printf("\n============================================\n\n\n\n\n");
     wrap(QuestionAnswer[1], BOARD_WIDTH);
     printf("%s\n", QuestionAnswer[1]);
-    printf("\n\n\n\n--------------------------------------------\n"
-           " ----- Correct [1] ---- Incorrect [2] ----- \n"
-           "--------------------------------------------\n");
+    printf("\n\n\n\n============================================\n");
+    printf(" ----- Correct [1] ---- Incorrect [2] ----- \n");
+    printf("============================================\n");
     selection = mainMenuUserInput("Make Selection");
     return selection;
 }
