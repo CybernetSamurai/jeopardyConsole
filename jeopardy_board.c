@@ -88,6 +88,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Font: Doom
     // Character Width/Height: Default
     printf("=========================================================\n");
+    printf(" ------------------------------------------------------- \n");
+    printf("=========================================================\n");
     setColor("Y");
     printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
