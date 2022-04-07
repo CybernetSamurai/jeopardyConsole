@@ -11,7 +11,7 @@
 #include "jeopardy_main.h"
 
 void SNC(int input, char* color);
-void SSC(char* string, char* toColor, char outColor);
+void SSC(char* string, char* toColor, char* outColor);
 
 // Global Variables for Team Scores
 int Team_One = 0;
@@ -115,7 +115,7 @@ void saveEnteredData(int team, int cat, int point) {
 // Reset Game Board
 void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     clearScreen();
-    setColor("Blue");
+    setColor("B");
     printBoard(arrayPoints, arraySelect);
 }
 
@@ -134,9 +134,9 @@ bool optionSelectionValidation(int selection) {
 int mainMenuUserInput(char* type) {
     int value, scanVal;
     printf("%s: ", type);
-    setColor("White");
+    setColor("W");
     scanVal = scanf("%d", &value);
-    setColor("Blue");
+    setColor("B");
     if (scanVal != 1) {
         getchar();
         value = 0;
@@ -169,23 +169,28 @@ int convertPointsSelected(int points) {
     return row;
 }
 
-// Change Output Colors
-// - setColor("Blue") for blue
-// - setColor("Yellow") for yellow
+/************************ 
+* Change Output Colors:
+* B for blue
+* Y for yellow
+* W for white
+* R for red
+* C for cyan
+************************/
 void setColor(char* color) {
-    if (strcmp(color, "Blue") == 0) {
+    if (strcmp(color, "B") == 0) {
         printf("\033[0;34m");
     }
-    else if (strcmp(color, "Yellow") == 0) {
+    else if (strcmp(color, "Y") == 0) {
         printf("\033[0;33m");
     }
-    else if (strcmp(color, "White") == 0) {
+    else if (strcmp(color, "W") == 0) {
         printf("\033[0;37m");
     }
-    else if (strcmp(color, "Red") == 0) {
+    else if (strcmp(color, "R") == 0) {
         printf("\033[0;31m");
     }
-    else if (strcmp(color, "Cyan") == 0) {
+    else if (strcmp(color, "C") == 0) {
         printf("\033[0;36m");
     }
 }
@@ -217,7 +222,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Font: Doom
     // Character Width/Height: Default
     printf("=========================================================\n");
-    setColor("Yellow");
+    setColor("Y");
     printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
            "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
@@ -226,25 +231,25 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
            "                     | |                     __/ |       \n"
            "                     |_|                    |___/        \n");
-    setColor("Blue");
+    setColor("B");
     printf("=========================================================\n");
-    printf(" -------- Team One: "); setColor("Yellow"); printf("%5d", Team_One); setColor("Blue"); printf(" ------ Team Two: ");
-            setColor("Yellow"); printf("%5d", Team_Two); setColor("Blue"); printf(" ------- \n");
+    printf(" -------- Team One: "); setColor("Y"); printf("%5d", Team_One); setColor("B"); printf(" ------ Team Two: ");
+            setColor("Y"); printf("%5d", Team_Two); setColor("B"); printf(" ------- \n");
     printf("=========================================================\n");
     setColor("Yellow");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
     setColor("Blue");
-    printf("  ["); SNC(1, "Cyan"); printf("]        ["); SNC(2, "Cyan"); printf("]       ["); SNC(3, "Cyan");
-           printf("]      ["); SNC(4, "Cyan"); printf("]       ["); SNC(5, "Cyan"); printf("]      ["); SNC(6, "Cyan"); printf("]   \n");
+    printf("  ["); SNC(1, "C"); printf("]        ["); SNC(2, "C"); printf("]       ["); SNC(3, "C");
+           printf("]      ["); SNC(4, "C"); printf("]       ["); SNC(5, "C"); printf("]      ["); SNC(6, "C"); printf("]   \n");
     printf("=========================================================\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
-                setColor("Yellow");
+                setColor("Y");
                 printf("  %4d    ", arrayPoints[i][j]);
             }
             else {
-                setColor("Blue");
+                setColor("B");
                 printf("  %4d    ", arrayPoints[i][j]);
             }
         }
@@ -252,12 +257,12 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("=========================================================\n"
-           " ---------- Team One ["); SNC(1, "Cyan"); printf("] ------- Team Two ["); SNC(2, "Cyan"); printf("] ---------- \n"
+           " ---------- Team One ["); SNC(1, "C"); printf("] ------- Team Two ["); SNC(2, "C"); printf("] ---------- \n"
            "=========================================================\n");
 }
 
 // Shorthand for Switch String Color
-void SSC(char* string, char* toColor, char outColor) {
+void SSC(char* string, char* toColor, char* outColor) {
     setColor(toColor);
     printf(string);
     setColor(outColor);
@@ -267,7 +272,7 @@ void SSC(char* string, char* toColor, char outColor) {
 void SNC(int input, char* color) {
     setColor(color);
     printf("%d", input);
-    setColor("Blue");
+    setColor("B");
 }
 
 // Clear Game Screen
