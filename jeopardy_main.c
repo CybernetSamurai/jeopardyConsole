@@ -28,26 +28,26 @@ int main(void) {
     };
     while (check) {    
         resetBoard(arrayPoints, arraySelect);
-        teamNumber = mainMenuUserInput("Team Select");
+        teamNumber = mainMenuUserInput("Team Select: ");
         while (!optionSelectionValidation(teamNumber)) {
             resetBoard(arrayPoints, arraySelect);
-            teamNumber = mainMenuUserInput("Team Select");
+            teamNumber = mainMenuUserInput("Team Select: ");
         }
 
-        colSelected = mainMenuUserInput("Catagory");
+        colSelected = mainMenuUserInput("Catagory: ");
         colSelected -= 1;
         while (!colSelectValidation(colSelected)) {
             resetBoard(arrayPoints, arraySelect);
             saveEnteredData(teamNumber,0,0);
-            colSelected = mainMenuUserInput("Catagory");
+            colSelected = mainMenuUserInput("Catagory: ");
             colSelected -= 1;
         }
 
-        ptsSelected = mainMenuUserInput("Points");
+        ptsSelected = mainMenuUserInput("Points: ");
         while (!pointSelectValidation(ptsSelected)) {
             resetBoard(arrayPoints, arraySelect);
             saveEnteredData(teamNumber,colSelected + 1,0);
-            ptsSelected = mainMenuUserInput("Points");
+            ptsSelected = mainMenuUserInput("Points: ");
         }
 
         rowSelected = convertPointsSelected(ptsSelected);
