@@ -8,8 +8,8 @@
 //#include <stdlib.h>
 
 // Global Variables for Team Scores
-int Team_One = 0;
-int Team_Two = 0;
+//int Team_One = 0;
+//int Team_Two = 0;
 
 /* Definition and Prototype Function for jeopardy_main.c */
 #define ROWS 5       // Number of Point Selections
