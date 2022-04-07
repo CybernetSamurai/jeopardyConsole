@@ -94,7 +94,9 @@ void printQuestion(int col, int row) {
 int printAnswer(int col, int row) {
     int selection;
     getQuestionAnswerArray(col, row);
-    printf("\n============================================\n\n\n\n\n");
+    printf("============================================\n");
+    printf(" ------------------------------------------ \n");
+    printf("============================================\n\n\n\n\n");
     setColor("Y");
     wrap(QuestionAnswer[1], BOARD_WIDTH);
     printf("%s\n", QuestionAnswer[1]);
