@@ -7,8 +7,10 @@
 #include "jeopardy_main.h"
 
 // Global Variables for Team Scores
+/*
 int Team_One = 0;
 int Team_Two = 0;
+*/
 
 // Main
 int main(void) {
