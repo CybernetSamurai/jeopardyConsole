@@ -43,8 +43,10 @@ void getQuestionAnswerArray(int col, int row) {
     strcpy(fullString, line_list[row]);
     // Empty String for Question
     char question[MAX_STR_LEN];
+    strcpy(question, "");
     // Empty String for Answer
     char answer[MAX_STR_LEN];
+    strcpy(answer, "");
     // Nullify question/answer Strings
     /*
     for (i = 0; i < MAX_STR_LEN; ++i) {
