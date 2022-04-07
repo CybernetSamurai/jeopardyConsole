@@ -5,10 +5,11 @@
 // If Input != int, Set Default to 0
 int mainMenuUserInput(char* type) {
     int value, scanVal;
-    printf("%s: ", type);
-    setColor("W");
+    SSC(type, "C", "W");
+    //printf("%s: ", type);
+    //setColor("W");
     scanVal = scanf("%d", &value);
-    setColor("B");
+    //setColor("B");
     if (scanVal != 1) {
         getchar();
         value = 0;
