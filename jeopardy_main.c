@@ -227,8 +227,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "                     |_|                    |___/        \n");
     setColor("Blue");
     printf("=========================================================\n"
-           " -------- Team One: "); setColor("Yellow"); printf("%4d", Team_One); setColor("Blue"); printf(" ------- Team Two: ");
-            setColor("Yellow"); printf("%4d", Team_Two); setColor("Blue"); printf(" -------- \n"
+           " -------- Team One: "); setColor("Yellow"); printf("%5d", Team_One); setColor("Blue"); printf(" ------ Team Two: ");
+            setColor("Yellow"); printf("%5d", Team_Two); setColor("Blue"); printf(" ------- \n"
            "=========================================================\n");
     setColor("Yellow");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
