@@ -17,6 +17,13 @@
 #define BOARD_WIDTH 44   // Length of Game Board for Question/Answer Formatting
 
 /* Prototype Functions for .._questions.c */
+void selectCategoryFile(int col);
+void getQuestionAnswerArray(int col, int row);
+void printQuestion(int col, int row);
+int printAnswer(int col, int row);
+inline int word_length(const char* input);
+void wrap(char* string, const int wrapline);
+
 /* Prototype Functions for .._board.c */
 /* Prototype Functions for .._validation.c */
 bool optionSelectionValidation(int selection);
@@ -32,7 +39,7 @@ void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
 void SNC(int input, char* color);
 void SSC(char* string, char* toColor, char* outColor);
-void selectCatagoryFile(int col);
+void selectCategoryFile(int col);
 void getQuestionAnswerArray(int col, int row);
 void printQuestion(int col, int row);
 int printAnswer(int col, int row);
