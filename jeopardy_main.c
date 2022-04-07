@@ -217,25 +217,16 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Font: Doom
     // Character Width/Height: Default
     printf("=========================================================\n");
-    //setColor("Yellow");
-   /* //printf("       ___                                _              \n"
+    setColor("Yellow");
+    printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
            "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
            "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |    \n"
            "    /\\__/ /  __/ (_) | |_) | (_| | | | (_| | |_| |      \n"
            "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
            "                     | |                     __/ |       \n"
-           "                     |_|                    |___/        \n");*/
-    //setColor("Blue");
-    SSC("       ___                                _              \n"
-           "      |_  |                              | |             \n"
-           "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
-           "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |    \n"
-           "    /\\__/ /  __/ (_) | |_) | (_| | | | (_| | |_| |      \n"
-           "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
-           "                     | |                     __/ |       \n"
-           "                     |_|                    |___/        \n", "Yellow", "Blue");
-    //setColor("Blue");
+           "                     |_|                    |___/        \n");
+    setColor("Blue");
     printf("=========================================================\n");
     printf(" -------- Team One: "); setColor("Yellow"); printf("%5d", Team_One); setColor("Blue"); printf(" ------ Team Two: ");
             setColor("Yellow"); printf("%5d", Team_Two); setColor("Blue"); printf(" ------- \n");
