@@ -46,15 +46,18 @@ bool pointSelectValidation(int points) {
 }
 
 // Remembers Previous User Input if Validation Fails
-void saveEnteredData(int team, int cat, int point) {
+void saveEnteredData(int team, int cat, int points) {
     if (team != 0) {
-        printf("Team Select: %d\n", team);
+        printf("Team Select: ");
+        SNC(team, "W");
     }
     if (cat != 0) {
-        printf("Catagory: %d\n", cat);
+        printf("Catagory: ");
+        SNC(cat, "W");
     }
     if (point != 0) {
-        printf("Points: %d\n", point);
+        printf("Points: "):
+        SNC(points, "W");
     }
 }
 
