@@ -229,7 +229,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            " HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n" //57
            "  [", Team_One, Team_Two); HL(1, "Cyan"); printf("]        ["); HL(2, "Cyan"); printf("]       ["); HL(3, "Cyan");
            printf("]      ["); HL(4, "Cyan"); printf("]       ["); HL(5, "Cyan"); printf("]      ["); HL(6, "Cyan"); printf("]   \n"
-           "---------------------------------------------------------\n\n");
+           "=========================================================\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
