@@ -1,4 +1,6 @@
 #include "jeopardy_main.h"
+int Team_One = 0;
+int Team_Two = 0;
 // add points to team scores
 void updatePoints(int teamNumber, int ptsSelected, int selection) {
     if (selection == 1 && teamNumber == 1) {
