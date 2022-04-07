@@ -10,9 +10,8 @@
 #include <string.h>
 #include "jeopardy_main.h"
 
-void HL(int input, char* color);
-
-typedef printf P;
+void SNC(int input, char* color);
+void SSC(char* string, char* toColor, char outColor);
 
 // Global Variables for Team Scores
 int Team_One = 0;
@@ -219,8 +218,8 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Font: Doom
     // Character Width/Height: Default
     printf("=========================================================\n");
-    setColor("Yellow");
-    printf("       ___                                _              \n"
+    //setColor("Yellow");
+    //printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
            "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
            "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |    \n"
@@ -228,17 +227,26 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
            "                     | |                     __/ |       \n"
            "                     |_|                    |___/        \n");
-    setColor("Blue");
-    printf("=========================================================\n"
-           " -------- Team One: "); setColor("Yellow"); printf("%5d", Team_One); setColor("Blue"); printf(" ------ Team Two: ");
-            setColor("Yellow"); printf("%5d", Team_Two); setColor("Blue"); printf(" ------- \n"
-           "=========================================================\n");
+    //setColor("Blue");
+    SSC("       ___                                _              \n"
+           "      |_  |                              | |             \n"
+           "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
+           "        | |/ _ \\/ _ \\| '_ \\ / _` | '__/ _` | | | |    \n"
+           "    /\\__/ /  __/ (_) | |_) | (_| | | | (_| | |_| |      \n"
+           "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
+           "                     | |                     __/ |       \n"
+           "                     |_|                    |___/        \n", "Yellow", "Blue");
+    //setColor("Blue");
+    printf("=========================================================\n");
+    printf(" -------- Team One: "); setColor("Yellow"); printf("%5d", Team_One); setColor("Blue"); printf(" ------ Team Two: ");
+            setColor("Yellow"); printf("%5d", Team_Two); setColor("Blue"); printf(" ------- \n");
+    printf("=========================================================\n");
     setColor("Yellow");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
     setColor("Blue");
-    printf("  ["); HL(1, "Cyan"); printf("]        ["); HL(2, "Cyan"); printf("]       ["); HL(3, "Cyan");
-           printf("]      ["); HL(4, "Cyan"); printf("]       ["); HL(5, "Cyan"); printf("]      ["); HL(6, "Cyan"); printf("]   \n"
-           "=========================================================\n\n");
+    printf("  ["); SNC(1, "Cyan"); printf("]        ["); SNC(2, "Cyan"); printf("]       ["); SNC(3, "Cyan");
+           printf("]      ["); SNC(4, "Cyan"); printf("]       ["); SNC(5, "Cyan"); printf("]      ["); SNC(6, "Cyan"); printf("]   \n");
+    printf("=========================================================\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
             if (arraySelect[i][j] == 1) {
@@ -254,11 +262,19 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("=========================================================\n"
-           " ---------- Team One ["); HL(1, "Cyan"); printf("] ------- Team Two ["); HL(2, "Cyan"); printf("] ---------- \n"
+           " ---------- Team One ["); SNC(1, "Cyan"); printf("] ------- Team Two ["); SNC(2, "Cyan"); printf("] ---------- \n"
            "=========================================================\n");
 }
 
-void HL(int input, char* color) {
+// Shorthand for Switch String Color
+void SSC(char* string, char* toColor, char outColor) {
+    setColor(toColor);
+    printf(string);
+    setColor(outColor);
+}
+
+// Shorthand for Switch Number Color
+void SNC(int input, char* color) {
     setColor(color);
     printf("%d", input);
     setColor("Blue");
