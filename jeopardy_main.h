@@ -16,7 +16,6 @@
 #define QUESTION_TIME 10 // Length of Question Timer
 #define BOARD_WIDTH 44   // Length of Game Board for Question/Answer Formatting
 
-/* Prototype Functions for .._main.c */
 /* Prototype Functions for .._questions.c */
 /* Prototype Functions for .._board.c */
 /* Prototype Functions for .._validation.c */
