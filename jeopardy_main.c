@@ -246,9 +246,9 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     printf(" -------- Team One: "); setColor("Y"); printf("%5d", Team_One); setColor("B"); printf(" ------ Team Two: ");
             setColor("Y"); printf("%5d", Team_Two); setColor("B"); printf(" ------- \n");
     printf("=========================================================\n");
-    setColor("Yellow");
+    setColor("Y");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
-    setColor("Blue");
+    setColor("B");
     printf("  ["); SNC(1, "C"); printf("]        ["); SNC(2, "C"); printf("]       ["); SNC(3, "C");
            printf("]      ["); SNC(4, "C"); printf("]       ["); SNC(5, "C"); printf("]      ["); SNC(6, "C"); printf("]   \n");
     printf("=========================================================\n\n");
