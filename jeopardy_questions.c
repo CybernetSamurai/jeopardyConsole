@@ -71,14 +71,16 @@ void printQuestion(int col, int row) {
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
         printf("Timer: "); setColor("Y"); printf("%01d\n", timer); setColor("B");
+        printf("============================================\n");
+        printf(" ------------------------------------------ \n");
         printf("============================================\n\n\n\n\n");
         setColor("Y");
         wrap(QuestionAnswer[0], BOARD_WIDTH);
         printf("%s\n", QuestionAnswer[0]);
         setColor("B");
-        printf("\n\n\n\n\n============================================\n"
-               " ------------------------------------------ \n"
-               "============================================\n");
+        printf("\n\n\n\n\n============================================\n");
+        printf(" ------------------------------------------ \n");
+        printf("============================================\n");
         sleep(1);
         --timer;
         clearScreen();
