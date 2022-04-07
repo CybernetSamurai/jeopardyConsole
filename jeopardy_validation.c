@@ -1,3 +1,19 @@
+// Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
+// Request User Input for Catagory and Point Values
+// If Input != int, Set Default to 0
+int mainMenuUserInput(char* type) {
+    int value, scanVal;
+    printf("%s: ", type);
+    setColor("W");
+    scanVal = scanf("%d", &value);
+    setColor("B");
+    if (scanVal != 1) {
+        getchar();
+        value = 0;
+    }        
+    return value;
+}
+
 // Validate selection between two options
 bool optionSelectionValidation(int selection) {
     bool check = false;
