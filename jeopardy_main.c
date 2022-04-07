@@ -3,11 +3,11 @@
 * Group:    Jeopardy Game
 * Authors:  Jacob, Jackson, Annabelle
 **************************************/
-
+/*
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
-#include <string.h>
+#include <string.h> */
 #include "jeopardy_main.h"
 
 void SNC(int input, char* color);
