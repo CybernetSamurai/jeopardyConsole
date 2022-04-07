@@ -28,7 +28,7 @@ void wrap(char* string, const int wrapline);
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 void SSC(char* string, char* toColor, char* outColor);
-void SNC(int input, char* color);
+void SNC(int input, char* toColor, char* outColor);
 void updatePoints(int teamNumber, int ptsSelected, int selection);
 void setColor(char* color);
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
