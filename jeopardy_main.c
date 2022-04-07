@@ -19,7 +19,6 @@ int Team_Two = 0;
 
 // Main
 int main(void) {
-    P("test");
     bool check = true; 
     int rowSelected, colSelected, ptsSelected, timer, teamNumber, selection;
     int arraySelect[ROWS][COLS] = 
