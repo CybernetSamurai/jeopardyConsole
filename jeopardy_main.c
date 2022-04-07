@@ -133,7 +133,9 @@ bool optionSelectionValidation(int selection) {
 int mainMenuUserInput(char* type) {
     int value, scanVal;
     printf("%s: ", type);
+    setColor("White");
     scanVal = scanf("%d", &value);
+    setColor("Blue");
     if (scanVal != 1) {
         getchar();
         value = 0;
