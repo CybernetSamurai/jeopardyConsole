@@ -215,6 +215,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Website: https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Doom&text=Jeopardy
     // Font: Doom
     // Character Width/Height: Default
+    setColor("Yellow");
     printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
            "        | | ___  ___  _ __   __ _ _ __ __| |_   _        \n"
@@ -223,6 +224,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "    \\____/ \\___|\\___/| .__/ \\__,_|_|  \\__,_|\\__, | \n"
            "                     | |                     __/ |       \n"
            "                     |_|                    |___/        \n");
+    setColor("Blue");
     printf("=========================================================\n"
            " -------- Team One: %04d ------- Team Two: %04d -------- \n"
            "=========================================================\n"
