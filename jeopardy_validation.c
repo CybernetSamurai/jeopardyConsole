@@ -42,3 +42,16 @@ bool pointSelectValidation(int points) {
     }
     return check;
 }
+
+// Makes board look nicer if input validation fails
+void saveEnteredData(int team, int cat, int point) {
+    if (team != 0) {
+        printf("Team Select: %d\n", team);
+    }
+    if (cat != 0) {
+        printf("Catagory: %d\n", cat);
+    }
+    if (point != 0) {
+        printf("Points: %d\n", point);
+    }
+}
