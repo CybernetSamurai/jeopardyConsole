@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <string.h>
+//#include <stdlib.h>
 
 /* Definition and Prototype Function for jeopardy_main.c */
 #define ROWS 5       // Number of Point Selections
