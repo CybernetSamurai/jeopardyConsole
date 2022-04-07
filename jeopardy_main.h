@@ -30,19 +30,18 @@ void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 void SSC(char* string, char* toColor, char* outColor);
 void SNC(int input, char* color);
 void updatePoints(int teamNumber, int ptsSelected, int selection);
-int convertPointsSelected(int points);
 void setColor(char* color);
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 
 /* Prototype Functions for .._validation.c */
-
-bool optionSelectionValidation(int selection);
-
-void saveEnteredData(int team, int cat, int point);
-
 int mainMenuUserInput(char* type);
+bool optionSelectionValidation(int selection);
 bool colSelectValidation(int col);
 bool pointSelectValidation(int points);
+void saveEnteredData(int team, int cat, int point);
+int convertPointsSelected(int points);
+
+
 
 
 
