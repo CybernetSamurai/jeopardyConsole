@@ -56,7 +56,7 @@ void getQuestionAnswerArray(int col, int row) {
         ++i;
     }
     question[i] = '\0';
-    ++i; // Skip the Semicolon when Itterating through chars
+    ++i; // Skip the Semicolon
     // Save the "Answer" Part of the LIne in Seperate Varaiable
     while (fullString[i] != '\0') {
         answer[j] = fullString[i];
@@ -73,7 +73,11 @@ void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
-        printf("Timer: "); setColor("Y"); printf("%01d\n", timer); setColor("B");
+        setColor("C");
+        printf("Timer");
+        setColor("B");
+        printf(": ");
+        setColor("Y"); printf("%01d\n", timer); setColor("B");
         printf("============================================\n");
         printf(" ------------------------------------------ \n");
         printf("============================================\n\n\n\n\n");
@@ -88,9 +92,6 @@ void printQuestion(int col, int row) {
         --timer;
         clearScreen();
     }
-        //printf("Press ENTER to see answer... ");
-        //getchar();
-        //getchar();
 }
 
 // Print Corresponding Answer 
