@@ -49,15 +49,21 @@ bool pointSelectValidation(int points) {
 void saveEnteredData(int team, int cat, int points) {
     if (team != 0) {
         printf("Team Select: ");
-        SNC(team, "W");
+        setColor("W");
+        printf("$d\n", team);
+        setColor("B");
     }
     if (cat != 0) {
-        printf("\nCatagory: ");
-        SNC(cat, "R");
+        printf("Catagory: ");
+        setColor("W");
+        printf("%d\n", cat);
+        setColor("B");
     }
     if (points != 0) {
-        printf("\nPoints: ");
-        SNC(points, "W");
+        printf("Points: ");
+        setColor("W");
+        printf("%d\n", points);
+        setColor("B");
     }
 }
 
