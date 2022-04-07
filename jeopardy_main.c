@@ -76,7 +76,7 @@ int main(void) {
         }    
     }
 }
-
+/*
 // add points to team scores
 void updatePoints(int teamNumber, int ptsSelected, int selection) {
     if (selection == 1 && teamNumber == 1) {
@@ -289,3 +289,4 @@ void SNC(int input, char* color) {
 void clearScreen() {
     printf("\e[2J\e[H");
 }
+*/
