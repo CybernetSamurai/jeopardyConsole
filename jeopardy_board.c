@@ -24,10 +24,10 @@ void SSC(char* string, char* toColor, char* outColor) {
 }
 
 // Shorthand for Switch Number Color
-void SNC(int input, char* color) {
-    setColor(color);
+void SNC(int input, char* toColor, char* outColor) {
+    setColor(toColor);
     printf("%d", input);
-    setColor("B");
+    setColor(outColor);
 }
 
 // Add or Subtract Points from Selected Team Score
