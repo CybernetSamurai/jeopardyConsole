@@ -215,6 +215,7 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     // Website: https://textkool.com/en/ascii-art-generator?hl=default&vl=default&font=Doom&text=Jeopardy
     // Font: Doom
     // Character Width/Height: Default
+    printf("=========================================================\n");
     setColor("Yellow");
     printf("       ___                                _              \n"
            "      |_  |                              | |             \n"
