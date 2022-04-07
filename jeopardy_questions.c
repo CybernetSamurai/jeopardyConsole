@@ -1,10 +1,11 @@
 // File IO Reference Used:
 // https://stackoverflow.com/questions/21114591/c-programming-read-specific-line-from-text-file?msclkid=8747c7afaae011eca26a4c7fa106a47d
 
+/*
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <stdbool.h> */
 #include "jeopardy_main.h"
 
 char line_list[QUESTION_CNT][MAX_STR_LEN];
