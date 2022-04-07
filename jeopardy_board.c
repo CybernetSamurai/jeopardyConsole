@@ -101,14 +101,14 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
            "                     |_|                    |___/        \n");
     setColor("B");
     printf("=========================================================\n");
-    printf(" -------- "); setColor("C"); printf("Team One: "); setColor("Y"); printf("%5d", Team_One); setColor("B"); 
+    printf(" -------- "); SSC("Team One: ", "C", "Y"); printf("%5d", Team_One); setColor("B"); 
         printf(" ------ "); setColor("C"); printf("Team Two: "); setColor("Y"); printf("%5d", Team_Two); setColor("B"); printf(" ------- \n");
     printf("=========================================================\n");
     setColor("Y");
     printf(" HORROR   ANIMATION   COMEDY   SCI-FI   FANTASY   ACTION \n"); //57
     setColor("B");
-    printf("  ["); SNC(1, "C"); printf("]        ["); SNC(2, "C"); printf("]       ["); SNC(3, "C");
-           printf("]      ["); SNC(4, "C"); printf("]       ["); SNC(5, "C"); printf("]      ["); SNC(6, "C"); printf("]   \n");
+    printf("  ["); SNC(1, "C", "B"); printf("]        ["); SNC(2, "C", "B"); printf("]       ["); SNC(3, "C", "B");
+           printf("]      ["); SNC(4, "C", "B"); printf("]       ["); SNC(5, "C", "B"); printf("]      ["); SNC(6, "C", "B"); printf("]   \n");
     printf("=========================================================\n\n");
     for (i = 0; i < ROWS; ++i) {
         for (j = 0; j < COLS; ++j) {
@@ -125,6 +125,6 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     }
     setColor("Blue");
     printf("=========================================================\n");
-    printf(" ---------- "); setColor("C"); printf("Team One ["); SNC(1, "C"); printf("] ------- Team Two ["); SNC(2, "C"); printf("] ---------- \n");
+    printf(" ---------- "); setColor("C"); printf("Team One ["); SNC(1, "C", "B"); printf("] ------- Team Two ["); SNC(2, "C", "B"); printf("] ---------- \n");
     printf("=========================================================\n");
 }
