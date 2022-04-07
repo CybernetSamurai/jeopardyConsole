@@ -1,4 +1,4 @@
-#define MAX_STR_LEN 250
+/*#define MAX_STR_LEN 250
 #define FILE_NUM 6
 #define FILE_LEN 14
 #define QUESTION_CNT 5
@@ -9,3 +9,4 @@ void selectCategoryFile(int col);
 void getQuestionAnswerArray(int col, int row);
 void printQuestion(int col, int row);
 int printAnswer(int col, int row);
+*/
