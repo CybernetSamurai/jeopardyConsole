@@ -49,6 +49,7 @@ void getQuestionAnswerArray(int col, int row) {
         question[i] = fullString[i];
         ++i;
     }
+    question[i] = '\0';
     ++i; // Skip the Semicolon when itterating through chars
     // Save the "Answer" Part of the LIne in Seperate Varaiable
     while (fullString[i] != '\0') {
@@ -56,6 +57,7 @@ void getQuestionAnswerArray(int col, int row) {
         ++i;
         ++j;
     }
+    answer[i] = '\0';
     strcpy(QuestionAnswer[0], question);
     strcpy(QuestionAnswer[1], answer);
 }
