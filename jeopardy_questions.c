@@ -105,7 +105,7 @@ int printAnswer(int col, int row) {
         printf("] ---- "); setColor("C"); printf("Incorrect"); setColor("B"); printf(" ["); setColor("C"); printf("2"); setColor("B");
         printf("] ----- \n");
     printf("============================================\n");
-    selection = mainMenuUserInput("Make Selection");
+    selection = mainMenuUserInput("Make Selection: ");
     return selection;
 }
 
