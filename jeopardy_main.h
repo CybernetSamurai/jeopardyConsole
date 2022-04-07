@@ -20,6 +20,8 @@ void setColor(char* color);
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]);
 void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
+void SNC(int input, char* color);
+void SSC(char* string, char* toColor, char* outColor);
 
 /* Definition and Prototype Function for jeopardy_questions.c */
 #define MAX_STR_LEN 250  // Maximum Length of Questions/Answers
