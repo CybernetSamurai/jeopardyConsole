@@ -99,6 +99,7 @@ void updatePoints(int teamNumber, int ptsSelected, int selection) {
     }
 }
 
+/*
 // Makes board look nicer if input validation fails
 void saveEnteredData(int team, int cat, int point) {
     if (team != 0) {
@@ -111,6 +112,7 @@ void saveEnteredData(int team, int cat, int point) {
         printf("Points: %d\n", point);
     }
 }
+*/
 
 // Reset Game Board
 void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
