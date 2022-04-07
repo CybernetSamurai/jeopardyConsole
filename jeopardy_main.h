@@ -1,3 +1,6 @@
+#ifndef MYHEADER_H
+#define MYHEADER_H
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
@@ -41,3 +44,5 @@ void printQuestion(int col, int row);
 int printAnswer(int col, int row);
 inline int word_length(const char* input);
 void wrap(char* string, const int wrapline);
+
+#endif
