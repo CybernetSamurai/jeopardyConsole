@@ -50,7 +50,7 @@ void saveEnteredData(int team, int cat, int points) {
     if (team != 0) {
         printf("Team Select: ");
         setColor("W");
-        printf("$d\n", team);
+        printf("%d\n", team);
         setColor("B");
     }
     if (cat != 0) {
