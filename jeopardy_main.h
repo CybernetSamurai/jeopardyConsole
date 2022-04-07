@@ -25,7 +25,9 @@ inline int word_length(const char* input);
 void wrap(char* string, const int wrapline);
 
 /* Prototype Functions for .._board.c */
+
 /* Prototype Functions for .._validation.c */
+
 bool optionSelectionValidation(int selection);
 void updatePoints(int teamNumber, int ptsSelected, int selection);
 void saveEnteredData(int team, int cat, int point);
@@ -39,11 +41,5 @@ void clearScreen(); // Code from Prof Marriott's 'movingImage.c' example
 int convertPointsSelected(int points);
 void SNC(int input, char* color);
 void SSC(char* string, char* toColor, char* outColor);
-void selectCategoryFile(int col);
-void getQuestionAnswerArray(int col, int row);
-void printQuestion(int col, int row);
-int printAnswer(int col, int row);
-inline int word_length(const char* input);
-void wrap(char* string, const int wrapline);
 
 #endif
