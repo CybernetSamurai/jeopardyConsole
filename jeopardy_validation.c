@@ -52,11 +52,11 @@ void saveEnteredData(int team, int cat, int points) {
         SNC(team, "W");
     }
     if (cat != 0) {
-        printf("Catagory: ");
+        printf("\nCatagory: ");
         SNC(cat, "W");
     }
     if (points != 0) {
-        printf("Points: ");
+        printf("\nPoints: ");
         SNC(points, "W");
     }
 }
