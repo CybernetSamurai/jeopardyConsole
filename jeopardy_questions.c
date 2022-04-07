@@ -66,14 +66,14 @@ void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
-        printf("Timer: "); setColor("Yellow"); printf("%01d\n", timer); setColor("Blue");
+        printf("Timer: "); setColor("Y"); printf("%01d\n", timer); setColor("B");
         printf("============================================\n\n\n\n\n");
-        setColor("Yellow");
+        setColor("Y");
         wrap(QuestionAnswer[0], BOARD_WIDTH);
         printf("%s\n", QuestionAnswer[0]);
-        setColor("Blue");
+        setColor("B");
         printf("\n\n\n\n\n============================================\n"
-               "--------------------------------------------\n"
+               " ------------------------------------------ \n"
                "============================================\n");
         sleep(1);
         --timer;
@@ -89,13 +89,13 @@ int printAnswer(int col, int row) {
     int selection;
     getQuestionAnswerArray(col, row);
     printf("\n============================================\n\n\n\n\n");
-    setColor("Yellow");
+    setColor("Y");
     wrap(QuestionAnswer[1], BOARD_WIDTH);
     printf("%s\n", QuestionAnswer[1]);
-    setColor("Blue");
+    setColor("B");
     printf("\n\n\n\n============================================\n");
-    printf(" ----- "); setColor("Cyan"); printf("Correct"); setColor("Blue"); printf(" ["); setColor("Cyan"); printf("1"); setColor("Blue");
-        printf("] ---- "); setColor("Cyan"); printf("Incorrect"); setColor("Blue"); printf(" ["); setColor("Cyan"); printf("2"); setColor("Blue");
+    printf(" ----- "); setColor("C"); printf("Correct"); setColor("B"); printf(" ["); setColor("C"); printf("1"); setColor("B");
+        printf("] ---- "); setColor("C"); printf("Incorrect"); setColor("B"); printf(" ["); setColor("C"); printf("2"); setColor("B");
         printf("] ----- \n");
     printf("============================================\n");
     selection = mainMenuUserInput("Make Selection");
