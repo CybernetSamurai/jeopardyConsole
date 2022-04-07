@@ -49,20 +49,17 @@ bool pointSelectValidation(int points) {
 // Remembers Previous User Input if Validation Fails
 void saveEnteredData(int team, int cat, int points) {
     if (team != 0) {
-        printf("Team Select: ");
-        setColor("W");
+        SSC("Team Select: ", "C", "W");
         printf("%d\n", team);
         setColor("B");
     }
     if (cat != 0) {
-        printf("Catagory: ");
-        setColor("W");
+        SSC("Catagory: ", "C", "W");
         printf("%d\n", cat);
         setColor("B");
     }
     if (points != 0) {
-        printf("Points: ");
-        setColor("W");
+        SSC("Points: ", "C", "W");
         printf("%d\n", points);
         setColor("B");
     }
