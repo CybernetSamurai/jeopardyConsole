@@ -46,10 +46,12 @@ void getQuestionAnswerArray(int col, int row) {
     // Empty String for Answer
     char answer[MAX_STR_LEN];
     // Nullify question/answer Strings
+    /*
     for (i = 0; i < MAX_STR_LEN; ++i) {
         question[i] = '\0';
         answer[i] = '\0';
     }
+    */
     // Save the "Question" Part of the Line in Seperate Variable
     while (fullString[i] != ';') {
         question[i] = fullString[i];
