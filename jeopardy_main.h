@@ -38,7 +38,7 @@ int mainMenuUserInput(char* type);
 bool optionSelectionValidation(int selection);
 bool colSelectValidation(int col);
 bool pointSelectValidation(int points);
-void saveEnteredData(int team, int cat, int point);
+void saveEnteredData(int team, int cat, int points);
 int convertPointsSelected(int points);
 
 
