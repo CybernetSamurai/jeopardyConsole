@@ -209,6 +209,7 @@ bool colSelectValidation(int col) {
 }
 */
 
+/*
 // Validate Input Point Value is Legal
 bool pointSelectValidation(int points) {
     bool check = false;
@@ -218,6 +219,7 @@ bool pointSelectValidation(int points) {
     }
     return check;
 }
+*/
 
 // Print Main Game Board
 void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
