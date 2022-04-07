@@ -47,13 +47,6 @@ void getQuestionAnswerArray(int col, int row) {
     // Empty String for Answer
     char answer[MAX_STR_LEN];
     strcpy(answer, "");
-    // Nullify question/answer Strings
-    /*
-    for (i = 0; i < MAX_STR_LEN; ++i) {
-        question[i] = 0;
-        answer[i] = 0;
-    }
-    */
     // Save the "Question" Part of the Line in Seperate Variable
     while (fullString[i] != ';') {
         question[i] = fullString[i];
@@ -77,11 +70,9 @@ void printQuestion(int col, int row) {
     int i, timer = QUESTION_TIME;
     for (i = 0; i < QUESTION_TIME; ++i) {
         getQuestionAnswerArray(col, row);
-        setColor("C");
-        printf("Timer");
+        setColor("C"); 
+        printf("Timer: "); setColor("Y"); printf("%01d\n", timer); 
         setColor("B");
-        printf(": ");
-        setColor("Y"); printf("%01d\n", timer); setColor("B");
         printf("============================================\n");
         printf(" ------------------------------------------ \n");
         printf("============================================\n\n\n\n\n");
@@ -118,7 +109,7 @@ int printAnswer(int col, int row) {
     return selection;
 }
 
-// Formats output within 44 sized desired space
+// Formats Output Within Board Space
 // Reference: https://stackoverflow.com/questions/22582989/word-wrap-program-c
 inline int word_length(const char* input) {
     int tempindex=0;
