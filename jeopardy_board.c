@@ -1,33 +1,59 @@
-#include "jeopardy_main.h"
+#include "jeopardy_main.h"+
+
+// Global Variables Defining Team Scores
 int Team_One = 0;
 int Team_Two = 0;
-// add points to team scores
+
+// Clear Game Screen
+void clearScreen() {
+    printf("\e[2J\e[H");
+}
+
+// Clear Screen/Reset Game Board
+void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
+    clearScreen();
+    setColor("B");
+    printBoard(arrayPoints, arraySelect);
+}
+
+// Shorthand for Switch String Color
+void SSC(char* string, char* toColor, char* outColor) {
+    setColor(toColor);
+    printf(string);
+    setColor(outColor);
+}
+
+// Shorthand for Switch Number Color
+void SNC(int input, char* color) {
+    setColor(color);
+    printf("%d", input);
+    setColor("B");
+}
+
+// Add or Subtract Points from Selected Team Score
 void updatePoints(int teamNumber, int ptsSelected, int selection) {
+    // Team One Selected & Question Correct
     if (selection == 1 && teamNumber == 1) {
         Team_One += ptsSelected;
         if (Team_One >= MAX_PTS) {
             Team_One = MAX_PTS;
         }
     }
+    // Team One Selected & Question Incorrect
     else if (selection == 2 && teamNumber == 1) {
         Team_One -= ptsSelected;
     }
+    // Team Two Selected & Question Correct
     else if (selection == 1 && teamNumber == 2) {
         Team_Two += ptsSelected;
         if (Team_Two >= MAX_PTS) {
             Team_Two = MAX_PTS;
         }
     }
+    // Team Two Selected & Question Incorrect
     else if (selection == 2 && teamNumber == 2) {
         Team_Two -= ptsSelected;
     }
-}
-
-// Reset Game Board
-void resetBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
-    clearScreen();
-    setColor("B");
-    printBoard(arrayPoints, arraySelect);
 }
 
 // Convert User Point Input to Related Row Value
@@ -55,14 +81,14 @@ int convertPointsSelected(int points) {
     return row;
 }
 
-/************************ 
-* Change Output Colors:
+/*****************************
+* Change Print Output Colors:
 * B for blue
 * Y for yellow
 * W for white
 * R for red
 * C for cyan
-************************/
+*****************************/
 void setColor(char* color) {
     if (strcmp(color, "B") == 0) {
         printf("\033[0;34m");
@@ -127,23 +153,4 @@ void printBoard(int arrayPoints[ROWS][COLS], int arraySelect[ROWS][COLS]) {
     printf("=========================================================\n"
            " ---------- Team One ["); SNC(1, "C"); printf("] ------- Team Two ["); SNC(2, "C"); printf("] ---------- \n"
            "=========================================================\n");
-}
-
-// Shorthand for Switch String Color
-void SSC(char* string, char* toColor, char* outColor) {
-    setColor(toColor);
-    printf(string);
-    setColor(outColor);
-}
-
-// Shorthand for Switch Number Color
-void SNC(int input, char* color) {
-    setColor(color);
-    printf("%d", input);
-    setColor("B");
-}
-
-// Clear Game Screen
-void clearScreen() {
-    printf("\e[2J\e[H");
 }
