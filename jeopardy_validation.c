@@ -1,4 +1,5 @@
 #include "jeopardy_main.h"
+
 // Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
 // Request User Input for Catagory and Point Values
 // If Input != int, Set Default to 0
@@ -15,7 +16,7 @@ int mainMenuUserInput(char* type) {
     return value;
 }
 
-// Validate selection between two options
+// Validate Selection Between Two Options (1 or 2)
 bool optionSelectionValidation(int selection) {
     bool check = false;
     if (selection == 1 || selection == 2) {
@@ -24,7 +25,7 @@ bool optionSelectionValidation(int selection) {
     return check;
 }
 
-// Validate Input Column Value is Legal
+// Validate User Input Column Value
 bool colSelectValidation(int col) {
     bool check = false;
     int i = 0;
@@ -34,7 +35,7 @@ bool colSelectValidation(int col) {
     return check;
 }
 
-// Validate Input Point Value is Legal
+// Validate User Input Point Value
 bool pointSelectValidation(int points) {
     bool check = false;
     int i = 200;
@@ -44,7 +45,7 @@ bool pointSelectValidation(int points) {
     return check;
 }
 
-// Makes board look nicer if input validation fails
+// Remembers Previous User Input if Validation Fails
 void saveEnteredData(int team, int cat, int point) {
     if (team != 0) {
         printf("Team Select: %d\n", team);
@@ -57,7 +58,7 @@ void saveEnteredData(int team, int cat, int point) {
     }
 }
 
-// Convert User Point Input to Related Row Value
+// Convert User Input Point Value to Related Row Value
 int convertPointsSelected(int points) {
     int row;
     switch (points) {
