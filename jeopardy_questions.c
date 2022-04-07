@@ -6,7 +6,7 @@
 char line_list[QUESTION_CNT][MAX_STR_LEN];
 char QuestionAnswer[2][MAX_STR_LEN];
 
-// Select Catagory File
+// Select Category File
 void selectCategoryFile(int col) {
     int i = 0;
     char line[MAX_STR_LEN];
