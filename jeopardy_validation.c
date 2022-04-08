@@ -1,3 +1,9 @@
+/**************************************
+* File:     jeopardy_validation.c
+* Group:    Jacob, Jackson, Annabelle
+* Authors:  Jacob Christensen
+**************************************/
+
 #include "jeopardy_main.h"
 
 // Reference used: https://stackoverflow.com/questions/42055482/how-to-reject-letter-when-requesting-int-in-c
