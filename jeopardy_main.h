@@ -1,3 +1,9 @@
+/**************************************
+* File:     jeopardy_main.h
+* Group:    Jacob, Jackson, Annabelle
+* Authors:  Jacob Christensen
+**************************************/
+
 #ifndef MYHEADER_H
 #define MYHEADER_H
 
