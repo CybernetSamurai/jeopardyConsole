@@ -1,7 +1,7 @@
 /**************************************
 * File:     jeopardy_main.c
-* Group:    Jeopardy Game
-* Authors:  Jacob, Jackson, Annabelle
+* Group:    Jacob, Jackson, Annabelle
+* Authors:  Jacob Christensen
 **************************************/
 
 #include "jeopardy_main.h"
