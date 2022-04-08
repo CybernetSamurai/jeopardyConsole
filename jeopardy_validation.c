@@ -6,10 +6,7 @@
 int mainMenuUserInput(char* type) {
     int value, scanVal;
     SSC(type, "C", "W");
-    //printf("%s: ", type);
-    //setColor("W");
     scanVal = scanf("%d", &value);
-    //setColor("B");
     if (scanVal != 1) {
         getchar();
         value = 0;
