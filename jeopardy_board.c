@@ -1,3 +1,9 @@
+/**************************************
+* File:     jeopardy_board.c
+* Group:    Jacob, Jackson, Annabelle
+* Authors:  Jacob Christensen
+**************************************/
+
 #include "jeopardy_main.h"
 
 // Global Variables Defining Team Scores
