@@ -41,12 +41,4 @@ bool pointSelectValidation(int points);
 void saveEnteredData(int team, int cat, int points);
 int convertPointsSelected(int points);
 
-
-
-
-
-
-
-
-
 #endif
