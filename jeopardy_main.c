@@ -33,7 +33,6 @@ int main(void) {
             resetBoard(arrayPoints, arraySelect);
             teamNumber = mainMenuUserInput("Team Select: ");
         }
-
         colSelected = mainMenuUserInput("Catagory: ");
         colSelected -= 1;
         while (!colSelectValidation(colSelected)) {
@@ -42,14 +41,12 @@ int main(void) {
             colSelected = mainMenuUserInput("Catagory: ");
             colSelected -= 1;
         }
-
         ptsSelected = mainMenuUserInput("Points: ");
         while (!pointSelectValidation(ptsSelected)) {
             resetBoard(arrayPoints, arraySelect);
             saveEnteredData(teamNumber,colSelected + 1,0);
             ptsSelected = mainMenuUserInput("Points: ");
         }
-
         rowSelected = convertPointsSelected(ptsSelected);
         if (arraySelect[rowSelected][colSelected] == 0) {
             arraySelect[rowSelected][colSelected] = 1;
