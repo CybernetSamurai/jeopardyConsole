@@ -1,6 +1,5 @@
 /**************************************
 * File:     jeopardy_board.c
-* Group:    Jacob, Jackson, Annabelle
 * Authors:  Jacob Christensen
 **************************************/
 
