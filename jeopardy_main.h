@@ -27,7 +27,7 @@ void selectCategoryFile(int col);
 void getQuestionAnswerArray(int col, int row);
 void printQuestion(int col, int row);
 int printAnswer(int col, int row);
-inline int word_length(const char* input);
+static inline int word_length(const char* input);
 void wrap(char* string, const int wrapline);
 
 /* Prototype Functions for .._board.c */

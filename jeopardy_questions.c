@@ -116,8 +116,8 @@ int printAnswer(int col, int row) {
 }
 
 // Formats Output Within Board Space
-// Reference: https://stackoverflow.com/questions/22582989/word-wrap-program-c
-inline int word_length(const char* input) {
+/* Reference: https://stackoverflow.com/questions/22582989/word-wrap-program-c */
+static inline int word_length(const char* input) {
     int tempindex=0;
     while (input[tempindex] != ' ' && input[tempindex] != 0 && input[tempindex] != '\n') {
         ++tempindex;
