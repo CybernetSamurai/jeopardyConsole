@@ -3,5 +3,5 @@
 Jeopardy Game using Console
 
 ## Installation
-```c
+```console
 make && ./jeopardy
