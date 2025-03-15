@@ -1,4 +1,4 @@
-# cs125_project
+# jeopardyConsole
 
 Jeopardy Game using Console
 
